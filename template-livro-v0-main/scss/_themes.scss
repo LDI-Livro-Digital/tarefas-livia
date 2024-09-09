@@ -1,0 +1,108 @@
+// LISTAGEM -------- APERTE CTRL + F para procurar --------
+
+// 1. FONTES
+		// 1.1 Dislexia
+
+// 2. TEMA ESCURO
+  // 2.1 Variáveis
+
+
+
+// 1.1 Dislexia
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url("../fonts/OpenDyslexic-Regular.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+@media screen {
+  
+  body{
+
+    &.creme{ 
+      --fundoCor: #FBF3E9;
+
+      #menu,
+      nav, 
+      #modal-ajustes{ 
+        background-color: var(--fundoCor);
+      }
+    }
+
+    // 2.1 Variáveis
+    &.escuro{ 
+      --fundoCor: #111416;
+      --textoCor: rgba(255,255,255,.75);
+
+      --primariaPrincipal: #009592;
+      --secundariaPrincipal: #FA5D5D;
+
+      --monoOpacidade: rgba(255,255,255, .2);
+      --monoMenu: #14191C;
+      --monoModalFundo: rgba(20,25,28,.95);
+      
+      #menu, nav, footer{
+        background-color: var(--monoMenu);
+        color: var(--textoCor);
+      }
+
+      .btn-primary{
+        color: #242424;
+      }
+
+      .lgpd_conteudo{
+        color: #000;
+      }
+
+      .config.salvar{
+        color: #000 !important;
+      }
+
+      #modal-ajustes{ 
+        background-color:var(--monoModalFundo);
+      }
+
+      #authors{
+        background-color: var(--monoOpacidade);
+      }
+      
+      article {
+
+        p, 
+        div, 
+        blockquote, 
+        li, 
+        span, 
+        section, 
+        figcaption, 
+        dd, 
+        dt{ 
+          font-family: $sans; 
+        }
+        
+        h1 > span{ color: var(--textoCor); }
+      } 
+
+      #voltar-topo{
+        background-color: var(--monoOpacidade);
+      }
+    }
+    
+    // &.dislexia{
+
+    //   *{ font-family: 'OpenDyslexic', sans-serif !important; } 
+      
+    //   em, cite{ font-style: normal; }      
+    // }
+  }
+}

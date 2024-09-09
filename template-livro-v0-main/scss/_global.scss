@@ -1,0 +1,415 @@
+// LISTAGEM -------- APERTE CTRL + F para procurar --------
+
+// 1. FONTES
+		// 1.1 Sem serifa (sans)
+		// 1.2 Com serifa (serif)
+		// 1.3 Ícones (Font Awesome)
+		// 1.4 Variáveis (fontes)
+
+// 2. DOCUMENTO
+		// 2.1 Classes de Ajuda (show/hide)
+		// 2.2 Variáveis (cores)
+		// 2.3 Reset Propriedades
+		// 2.4 Classes de Acessibilidade
+		// 2.5 Container, Main, Footer
+		// 2.6 Botões - Mixin, Classes, btn#VoltarTopo
+
+// -------------------------------------------------------------
+
+
+// 1.1 Sem serifa (sans)
+
+/* archivo-300 - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-regular - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-500 - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-600 - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-700 - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-800 - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-300italic - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-italic - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-500italic - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-600italic - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-700italic - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* archivo-800italic - latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 800;
+  src: local(''),
+       url('../fonts/archivo-v18-latin-800italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/archivo-v18-latin-800italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+// 1.2 Com serifa (serif)
+
+@font-face {
+  font-family: 'source_serif_pro';
+  src: url('../fonts/sourceserifpro-bold-webfont.woff2') format('woff2'),
+    url('../fonts/sourceserifpro-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_serif_pro';
+  src: url('../fonts/sourceserifpro-boldit-webfont.woff2') format('woff2'),
+    url('../fonts/sourceserifpro-boldit-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'source_serif_pro';
+  src: url('../fonts/sourceserifpro-regular-webfont.woff2') format('woff2'),
+    url('../fonts/sourceserifpro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_serif_pro';
+  src: url('../fonts/sourceserifpro-it-webfont.woff2') format('woff2'),
+    url('../fonts/sourceserifpro-ut-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+// 1.3 Ícones (Font Awesome)
+@font-face {
+	font-family: "Font Awesome 5 Free";
+	src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+// 1.4 Variáveis (fontes)
+$sans: "Archivo", sans-serif;
+$serif: 'source_serif_pro', serif;
+
+$bold: 800;
+$semibold: 700;
+$medium: 600;
+$regular: 500;
+$light: 400;
+
+%fontAwesome {
+	font-family: "Font Awesome 5 Free";
+  font-weight: $bold;
+  font-size: 1rem;
+}
+
+
+
+// 2.1 Classes de Ajuda (show/hide)
+
+html {
+  .show{
+    display: block !important;
+  }
+  .hide{
+    display: none !important;
+  }
+
+  scroll-behavior: smooth;
+}
+
+
+// 2.2 Variáveis (cores)
+
+body{
+  font-size: 16px;
+  margin: 0;
+  font-family: $sans;
+  overflow-x: hidden;
+  background-color: var(--fundoCor);
+  color: var(--textoCor);
+  letter-spacing: 0.01rem;
+  
+  --fundoCor: #fff;
+  --textoCor: #141414;
+
+  --primariaPrincipal: #006866;
+  --primariaBorda: #006866;
+  --primariaOpacidade: #0068660c;
+
+  --secundariaPrincipal: #B24040;
+  --secundariaBorda: #B24040; 
+  --secundariaOpacidade: #b2404013;
+
+  --terciariaPrincipal: #D0BD49;
+  --terciariaBorda: #D0BD49; 
+  --terciariaOpacidade: #d0be492c;
+
+  --iconeOpaco: #BF8686;
+}
+
+
+// 2.3 Reset Propriedades 
+
+*:focus {
+  outline: none;
+}
+
+.focus-visible {
+  box-shadow: 0 0 0 2px var(--secundariaBorda);
+}
+
+button{
+  border: none;
+  background: none;
+  font-family: $sans;
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+// 2.4 Classes de Acessibilidade
+
+.navegacao-teclado{
+  position: absolute;
+  left: -999px;
+
+  &:focus{
+    left: 0;
+    top: 0;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 6px rgba(black, .2);
+    z-index: 4;
+  }
+}
+
+%readerOnly{
+  position: absolute;
+  left: -9999px;
+}
+
+
+// 2.5 Documento - Container, Main, Footer
+
+.container{
+  // display: flex; // alteracao ajuste de leitura livia
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @media screen and (min-width: 1024px){
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+.container-content{
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+
+
+footer{
+  background-color: var(--secundariaPrincipal);
+  text-align: center;
+  padding: 1.5rem 0;
+  color: white;
+}
+
+
+main{
+  margin-top: 5rem;
+
+  @media screen and (min-width: 1024px){
+    margin-top: 8rem;
+  }
+  
+}
+
+
+
+
+// 2.6 Botões - Mixin, Classes, btn#VoltarTopo
+
+@mixin btn(){
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 1.15rem;
+  font-weight: $regular;
+  height: 42px;
+  padding: .5rem 1.5rem;
+  border-radius: 60px;
+}
+
+.btn-primary{
+  @include btn();
+  background-color: var(--secundariaPrincipal);
+  color: white;
+
+  &:hover{
+    box-shadow: 0 2px 6px rgba(black, .3);
+  }
+}
+
+.btn-secondary{
+  @include btn();
+  color:var(--secundariaPrincipal);
+  border: 1px solid var(--secundariaPrincipal);
+
+  &:hover{
+    background-color: var(--primariaOpacidade);
+  }
+}
+
+.btn-terciary{
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: $semibold;
+  color: var(--secundariaPrincipal);
+  border-radius: 2px;
+
+  &:hover{
+    background-color: var(--primariaOpacidade);
+  }
+
+  &.ajuste-limite {
+    color: #BF8686;
+  }
+}
+
+a{
+  &.btn-primary, &.btn-secondary{
+    display: inline-block;
+    height: calc(40px - 1rem);
+    line-height: 1.2;
+
+    &:hover{ text-decoration: none; }
+  }
+}
+
+
+#voltar-topo{
+  display: block;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 5px;
+  padding: 0;
+
+  &:before{
+    @extend %fontAwesome;
+    content: '\f077';
+    padding: .5rem;
+    line-height: 2;
+  }
+
+  span{
+    position: absolute;
+    left: -9999px;
+  }
+}
+

@@ -1,0 +1,125 @@
+#expandir {
+	font-size: .8rem;
+	float: right;
+	margin-top: -3.85rem;
+	// height: fit-content; // removido - livia
+	// inicio alterações hover dos botões - livia
+	width: 150px;
+	height: 25px;
+	border: 2px solid var(--secundariaPrincipal);
+	// fim alterações hover dos botões - livia
+	padding: .15rem 1rem;
+}
+
+// inicio alterações hover dos botões - livia
+#expandir:hover {
+	background-color: var(--secundariaPrincipal);
+	color: white;
+}
+// fim alterações hover dos botões - livia
+
+
+.sumario {
+	padding: 0;
+	margin: 1rem 0;
+
+	>li {
+		min-height: calc(40px - .3rem - 1px);
+	}
+
+	li {
+		list-style: none;
+		border-top: 1px solid var(--secundariaPrincipal);
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		-moz-margin-end: 8px;
+		padding-top: .3rem;
+
+		a,
+		.titulo {
+			font-size: 1.15rem;
+			line-height: 1.5;
+		}
+
+		a.ativo {
+			font-weight: $bold;
+			font-style: italic;
+			color: var(--primariaPrincipal);
+		}
+
+		&.atual {
+			border-top: 3px solid var(--primariaPrincipal);
+
+			&.capitulo {
+				.numero {
+					color: var(--primariaPrincipal);
+				}
+			}
+
+		}
+
+		&.capitulo {
+			padding-top: 0;
+
+			a:hover {
+				text-decoration: none;
+
+				>.titulo {
+					text-decoration: underline;
+				}
+			}
+
+			.numero {
+				color: var(--secundariaPrincipal);
+				font-size: 1.75rem;
+				font-weight: $bold;
+				padding-right: 0.5rem;
+				line-height: 1.4;
+				vertical-align: top;
+			}
+
+			.titulo {
+				display: inline-block;
+				width: calc(100% - 3rem);
+				line-height: 1.2;
+				padding-top: 0.6rem;
+			}
+
+			ul {
+				padding-left: 2.4rem;
+
+				li {
+					border: none;
+					margin: 0;
+					margin-bottom: .5rem;
+
+					a {
+						font-size: 1rem;
+						font-weight: $regular;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+
+					&:last-of-type {
+						padding-bottom: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	&.js .capitulo .intertitulos {
+		visibility: hidden;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .5s ease;
+
+		&.expandido {
+			visibility: visible;
+			max-height: 100vh;
+			transition: max-height .5s ease-in;
+		}
+	}
+}
