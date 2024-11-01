@@ -87,11 +87,8 @@
 
     ul {
       overflow: auto;
-      // inicio alterações scrollbar do sumário - livia
-      scrollbar-color: #9c9c9c white;
-      scrollbar-width: auto;
-      scrollbar-arrow-color: #9c9c9c;
-      // fim alterações scrollbar do sumário - livia
+      scrollbar-color: rgba(224,224,224, .6) #fff;
+      scrollbar-width: thin;
 
       &::-webkit-scrollbar {
         width: 16px;

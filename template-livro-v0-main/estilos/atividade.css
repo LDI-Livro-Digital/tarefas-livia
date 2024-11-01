@@ -1,0 +1,23 @@
+div {
+    padding-top: 0.5rem;
+    border-top: 2px solid #B24040;
+    max-width: 730px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #B24040;
+    margin-top: 2rem;
+    text-transform: none;
+    line-height: 1.2;
+    font-family: "Archivo", sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+p {
+    font-size: 1em;
+    line-height: 180%;
+    font-family: "Archivo", sans-serif;
+}

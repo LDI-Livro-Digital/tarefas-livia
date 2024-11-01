@@ -1,0 +1,62 @@
+figure {
+    margin: 2rem auto;
+    max-width: 730px;
+
+    /* Ajuste para telas maiores */
+    @media only screen and (min-width: 720px) {
+        padding-right: 150px;
+    }
+
+    /* Estilos da imagem */
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Estilo retrato */
+    &.retrato {
+        margin: 3rem auto;
+        max-width: 400px;
+    }
+
+    /* Estilo lateral */
+    &.lateral {
+        width: 150px;
+        float: right;
+        margin: 0;
+        margin-left: 1rem;
+
+        /* Ajuste para telas maiores */
+        @media only screen and (min-width: 1024px) {
+            width: 270px;
+            margin-left: 2rem;
+        }
+
+        @media only screen and (min-width: 1642px) {
+            margin-right: -150px;
+        }
+    }
+}
+
+figure figcaption {
+    font-family: archivo, sans-serif;
+    font-size: 1em;
+    display: block;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+figure figcaption>span {
+    color: #006866;
+}
+
+figure figcaption a {
+    color: #006866;
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+}

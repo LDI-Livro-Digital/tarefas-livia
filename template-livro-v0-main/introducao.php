@@ -1,5 +1,5 @@
 <?php 
-$capitulo = "Introdução";
+$capitulo = "Introdução"; // criado junto com o cabeçalho (?)
 $titulo = "O Estudo da Química Ambiental";
 $abertura = "(img/introducao.png)";
 include("components/page-header.php"); 

@@ -1,0 +1,14 @@
+h2 {
+    color: #006866;
+    text-transform: none;
+    line-height: 1.2;
+    font-family: "Archivo", sans-serif;
+    margin-bottom: 1rem;
+    max-width: 730px;
+    word-break: break-word;
+    hyphens: auto;
+    font-size: 1.6em;
+    margin-top: 3rem;
+    font-weight: 800;
+    padding-bottom: .5rem;
+}

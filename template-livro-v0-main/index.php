@@ -3,6 +3,7 @@
 $anoLivro = "2024";
 $tituloLivro = "Nome do Livro";
 $autorLivro = "Nome do Autor";
+echo '<script defer type="module" src="scripts/modulo.js"></script>';
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +61,9 @@ $autorLivro = "Nome do Autor";
 
     <section id="info">
       <div class="container container-content">
-        <h2>Como usar esse livro?</h2>
+        <!-- <h2>Como usar esse livro?</h2> -->
+        <elemento-titulo
+        texto="Como usar esse livro?"></elemento-titulo>
 
         <!-- <div class="info-item">
           <p class="info-text">Disponibilizamos esse livro também em um formato adequado para <strong>impressão</strong>.</p>

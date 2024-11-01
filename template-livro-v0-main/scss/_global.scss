@@ -229,8 +229,6 @@ body{
   --terciariaPrincipal: #D0BD49;
   --terciariaBorda: #D0BD49; 
   --terciariaOpacidade: #d0be492c;
-
-  --iconeOpaco: #BF8686;
 }
 
 
@@ -290,7 +288,6 @@ a{
 // 2.5 Documento - Container, Main, Footer
 
 .container{
-  // display: flex; // alteracao ajuste de leitura livia
   padding-right: 2rem;
   padding-left: 2rem;
 
@@ -370,10 +367,6 @@ main{
 
   &:hover{
     background-color: var(--primariaOpacidade);
-  }
-
-  &.ajuste-limite {
-    color: #BF8686;
   }
 }
 

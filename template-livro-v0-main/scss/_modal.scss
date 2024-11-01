@@ -2,13 +2,11 @@
   display: none;
   position: fixed;
   background-color: rgba(white, 0.95);
-  width: 360px; //100%
+  width: 100%;
   top: 56px;
-  ;
   z-index: 2;
   padding: 2rem 0 0;
-  border-right: 1px solid #606060; //border-bottom: 3px solid var(--secundariaPrincipal);
-  border-bottom: 1px solid #606060;
+  border-bottom: 3px solid var(--secundariaPrincipal);
   visibility: hidden;
   overflow: hidden;
   opacity: 0;
@@ -20,20 +18,15 @@
     transition: all 0.3s ease-out;
   }
 
-  >.container-content {
-    padding: 0 42px;
+  > .container-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; // flex-start
-    // width: 280px;
+    justify-content: flex-start;
   }
 
   .modal-title {
-    // color: var(--primariaPrincipal);
-    text-align: left;
-    width: 100%;
-    color: #606060; // no modo escuro ficou meio apagado
+    color: var(--primariaPrincipal);
     text-transform: lowercase;
     font-variant: small-caps;
     font-size: 1.15rem;
@@ -45,10 +38,9 @@
     margin-top: 2rem;
     padding: 0;
     display: flex;
-    flex-direction: column; //row
+    flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 0;
-    width: 280px;
 
     @media screen and (min-width: 720px) {
       flex-wrap: nowrap;
@@ -62,27 +54,26 @@
     flex: 1 1 100%;
     padding-top: 0.5rem;
     display: flex;
-    width: 100%;
 
-    >.modal-item-title {
+    > .modal-item-title {
       font-size: 1.15rem;
       flex: 1 1 0;
       margin-bottom: 0.5rem;
     }
 
-    >.modal-item-info {
+    > .modal-item-info {
       display: none;
     }
 
     &:last-of-type {
       display: block;
 
-      >.modal-item-title {
+      > .modal-item-title {
         display: inline-block;
         width: 100%;
       }
 
-      >.modal-item-options {
+      > .modal-item-options {
         float: right;
         margin-top: -2.5rem;
         display: flex;
@@ -99,7 +90,7 @@
         margin-right: 2rem;
       }
 
-      >.modal-item-info {
+      > .modal-item-info {
         display: block;
         order: 3;
         font-weight: $light;
@@ -107,7 +98,7 @@
       }
 
       &:last-of-type {
-        >.modal-item-info {
+        > .modal-item-info {
           width: calc(100% - 90px);
           display: inline-block;
         }
@@ -122,7 +113,6 @@
   }
 
   #modal-close {
-    color: #606060;
     position: absolute;
     top: -1rem;
     right: 1rem;
@@ -155,7 +145,7 @@
         margin-right: 0;
       }
 
-      >.modal-item-info {
+      > .modal-item-info {
         display: block;
         width: 100%;
         order: 5;
@@ -168,49 +158,42 @@
     }
   }
 
-  #botoes-tamanho-texto {
-    // background-color: orange;
-    width: 148px;
-    height: 44px;
-    justify-content: space-between;
-  }
-
   // botões de ajuste
   div {
     display: flex;
-    align-items: center;
+    // align-items: center;
     flex-wrap: nowrap;
-
+    
     #btn-amplia,
     #btn-reduz,
     #btn-padrao {
-      padding: 0;
-      width: 44px;
-      height: 44px;
-      align-self: auto; //baseline
-
+      margin: 0;
+      // height: fit-content;
+      padding: 0 0.5rem;
+      align-self: baseline;
+  
       &:before {
         @extend %fontAwesome;
-        // color: var(--secundariaPrincipal);
+        color: var(--secundariaPrincipal);
         font-size: 1.4rem;
       }
-
+  
       span {
         @extend %readerOnly;
       }
     }
-
-    #btn-reduz:before {
-      content: "\f031 -";
-    }
-
-    #btn-padrao:before {
-      content: "\f031";
-      padding: 0 4px;
-    }
-
+  
     #btn-amplia:before {
       content: "\f031 +";
+    }
+  
+    #btn-padrao:before {
+      content: "\f031";
+      margin: 0 4px;
+    }
+  
+    #btn-reduz:before {
+      content: "\f031 -";
     }
   }
 
@@ -223,7 +206,7 @@
       content: "";
       position: absolute;
       left: 0;
-      border: solid 1px #565656; //secundariaPrincipal - alteracao
+      border: solid 1px var(--secundariaPrincipal);
       border-radius: 50%;
       width: 1.1rem;
       height: 1.1rem;
@@ -247,7 +230,7 @@
       font-variant: small-caps;
       font-size: 0.9rem;
       font-weight: $semibold;
-      color: #565656; // alteracao livia
+      color: var(--secundariaPrincipal);
     }
 
     &:last-of-type {
@@ -258,11 +241,9 @@
   #fundo-branco:before {
     background-color: white;
   }
-
   #fundo-creme:before {
     background-color: seashell;
   }
-
   #fundo-escuro:before {
     background-color: #141d26;
   }
@@ -307,7 +288,7 @@
     transition: 0.4s;
   }
 
-  input:checked+.slider {
+  input:checked + .slider {
     background-color: var(--secundariaPrincipal);
   }
 
@@ -315,7 +296,7 @@
               box-shadow: 0 0 1px var(--secundariaPrincipal);
             }*/
 
-  input:checked+.slider:before {
+  input:checked + .slider:before {
     -webkit-transform: translateX(0.85rem);
     -ms-transform: translateX(0.85rem);
     transform: translateX(0.85rem);
@@ -329,71 +310,4 @@
   .slider.round:before {
     border-radius: 50%;
   }
-}
-
-/* Cor padrão dos botões */
-// #btn-amplia:before,
-// #btn-reduz:before,
-// #btn-padrao:before {
-//   color: var(--secundariaPrincipal);
-// }
-
-#nota-tamanho-texto {
-  line-height: 150%;
-  font-size: 14px;
-  width: 272px;
-  height: 53px;
-  color: #606060; // no modo escuro ficou meio apagado
-  align-items: start;
-}
-
-// #modo-dislexia {
-//   display: none;
-// }
-
-// container da escala
-.scale-container {
-  position: relative; // define posicao relativa para os filhos (se posicionam a partir dele)
-  width: 272px;
-  margin-top: 16px;
-  display: block;
-}
-
-.line {
-  width: 272px;
-  height: 2px;
-  background-color: var(--secundariaPrincipal);
-  position: relative; //define posicao relativa para os filhos (se posicionam a partir dele)
-}
-
-.vertical-line {
-  position: absolute; //quando o pai nao eh fixed, ele segue esses valores
-  // top: 0;
-  bottom: 0;
-  height: 8px;
-  width: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--secundariaPrincipal);
-}
-
-.position-0 { left: 0%; }
-.position-1 { left: 16.66%; }
-.position-2 { left: 33.33%; }
-.position-3 { left: 50%; }
-.position-4 { left: 66.66%; }
-.position-5 { left: 83.33%; }
-.position-6 { left: 100%; }
-
-.circle {
-  --eixo-x: 32;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: 2px solid var(--secundariaPrincipal);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); //translate(-8px, -50%); //nao afeta o fluxo da página
-  left: var(--eixo-x);
 }

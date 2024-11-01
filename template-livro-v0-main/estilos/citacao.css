@@ -1,0 +1,12 @@
+p {
+    word-break: break-word;
+    font-size: 1em;
+    line-height: 180%;
+    font-family: "source_serif_pro", serif;
+    max-width: 730px;
+    text-align: right;
+    color: #006866;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+}

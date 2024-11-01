@@ -1,0 +1,7 @@
+p {
+    word-break: break-word;
+    font-size: 1em;
+    line-height: 180%;
+    font-family: "Archivo", sans-serif;
+    max-width: 730px;
+}

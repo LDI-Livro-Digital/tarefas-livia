@@ -1,70 +1,54 @@
-#expandir {
+#expandir{
 	font-size: .8rem;
 	float: right;
 	margin-top: -3.85rem;
-	// height: fit-content; // removido - livia
-	// inicio alterações hover dos botões - livia
-	width: 150px;
-	height: 25px;
-	border: 2px solid var(--secundariaPrincipal);
-	// fim alterações hover dos botões - livia
-	padding: .15rem 1rem;
+	height: fit-content;
+  padding: .15rem 1rem;
 }
 
-// inicio alterações hover dos botões - livia
-#expandir:hover {
-	background-color: var(--secundariaPrincipal);
-	color: white;
-}
-// fim alterações hover dos botões - livia
-
-
-.sumario {
+.sumario{
 	padding: 0;
 	margin: 1rem 0;
 
-	>li {
+	>li{
 		min-height: calc(40px - .3rem - 1px);
 	}
 
-	li {
+	 li {
 		list-style: none;
 		border-top: 1px solid var(--secundariaPrincipal);
 		margin-bottom: 1rem;
 		font-size: 1rem;
-		-moz-margin-end: 8px;
+		-moz-margin-end : 8px;
 		padding-top: .3rem;
 
-		a,
+		 a,
 		.titulo {
 			font-size: 1.15rem;
 			line-height: 1.5;
 		}
 
-		a.ativo {
+		a.ativo{
 			font-weight: $bold;
 			font-style: italic;
 			color: var(--primariaPrincipal);
 		}
 
-		&.atual {
+		&.atual{
 			border-top: 3px solid var(--primariaPrincipal);
 
-			&.capitulo {
-				.numero {
-					color: var(--primariaPrincipal);
-				}
+			&.capitulo{
+				.numero{ color: var(--primariaPrincipal); }
 			}
 
 		}
 
 		&.capitulo {
 			padding-top: 0;
-
-			a:hover {
+			a:hover{
 				text-decoration: none;
 
-				>.titulo {
+				> .titulo {
 					text-decoration: underline;
 				}
 			}
@@ -110,13 +94,12 @@
 		}
 	}
 
-	&.js .capitulo .intertitulos {
+	&.js .capitulo .intertitulos{
 		visibility: hidden;
 		overflow: hidden;
 		max-height: 0;
 		transition: all .5s ease;
-
-		&.expandido {
+		&.expandido{
 			visibility: visible;
 			max-height: 100vh;
 			transition: max-height .5s ease-in;

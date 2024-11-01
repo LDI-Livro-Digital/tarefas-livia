@@ -1,14 +1,14 @@
-.navbar {
+.navbar{
   position: fixed;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
   width: 100%;
   height: 56px;
   top: 0;
   left: 0;
   z-index: 3;
 
-  >.container {
+  > .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,39 +16,12 @@
     height: 100%;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px){
     height: 76px;
   }
 }
 
-// inicio alteração ajustes de leitura - livia
-.titulo-livro-navbar {
-  position: fixed;
-  background-color: var(--fundoCor);
-  width: 100%;
-  height: 22px;
-  padding-left: 4rem; // padding de 21 px fica completamente desalinhado
-  padding-right: 4rem;
-  padding-bottom: 17px;
-  padding-top: 17px;
-
-  span {
-    width: 320px;
-  }
-
-  &.hidden {
-    display: none;
-  }
-
-  @media screen and (max-width: 719px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-// fim alteração ajustes de leitura - livia
-
-.nav-title {
+.nav-title{
   height: fit-content;
   flex-grow: 1;
   overflow: hidden;
@@ -59,15 +32,15 @@
   white-space: nowrap;
   margin-right: 1rem;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px){
     font-size: 1.3rem;
   }
 }
 
-#link-inicio {
+#link-inicio{
   display: none;
 
-  @media screen and (min-width: 1288px) {
+  @media screen and (min-width: 1288px){
     display: block;
     text-transform: lowercase;
     font-variant: small-caps;
@@ -79,14 +52,12 @@
     padding: 0;
   }
 
-  &:not(.js) {
+  &:not(.js){
     display: inline-block;
 
-    span {
-      @extend %readerOnly;
-    }
+    span{ @extend %readerOnly; }
 
-    &:before {
+    &:before{
       @extend %fontAwesome;
       content: "\f015";
       color: var(--secundariaPrincipal);
@@ -96,122 +67,89 @@
   }
 }
 
-#nav-ajustes,
-#nav-menu {
+#nav-ajustes, #nav-menu{
   min-width: 3rem;
   display: none;
 
-  &.js {
+  &.js{
     display: block;
   }
 
-  &:before {
+  &:before{
     @extend %fontAwesome;
   }
 
-  span {
+  span{
     margin-left: .5rem;
   }
 
-  &.desabilitado {
+  &.desabilitado{
     opacity: .2;
     cursor: default;
   }
 }
 
 
-// inicio alterações ajuste de leitura - livia
-#nav-ajustes {
-  justify-content: flex-end;
-  // z-index: 2000;
+#nav-ajustes{
 
-  padding: 14px 8px;
-  width: 162px;
-  height: 44px;
-  white-space: nowrap;
-
-  span {
-    margin: 0;
-    font-size: 14px;
-    // white-space: nowrap;
-    width: 116px;
-  }
-
-  &::after {
-    @extend %fontAwesome;
+  &:before{
     content: "\f1de";
-    width: 32px;
-    display: inline-block;
-    transform: rotate(-90deg);
   }
 
-  @media screen and (max-width: 719px) {
+  @media screen and (max-width: 719px){
     margin-right: -1rem;
-    justify-content: flex-end;
 
-    // span {
-    //   position: absolute;
-    //   left: -9999px;
-    // }
+    span{
+      position: absolute;
+      left: -9999px;
+    }
   }
 }
 
-// fim alterações ajuste de leitura - livia
-
-
-#nav-menu {
+#nav-menu{
   height: 3rem;
-  // width: 44px; // já está 48x48px
-  // height: 44px;
-
-  padding-left: 0;
-  padding-right: 32px;
-
-  &:before {
+  &:before{
     content: "\f0c9";
   }
 
-  span {
+  span{
     position: absolute;
     left: -9999px;
   }
 
   // @media screen and (max-width: 719px){
-  // margin-left: -1rem;
-  // margin-right: .5rem;
+    margin-left: -1rem;
+    margin-right: .5rem;
   // }
 
-  @media screen and (min-width: 1288px) {
-    &.js {
-      display: none;
-    }
+  @media screen and (min-width: 1288px){
+    &.js{ display: none; }
   }
 }
 
 
-.nav-logo {
+.nav-logo{
   height: fit-content;
   margin-left: .5rem;
 
-  span {
+  span{
     @extend %readerOnly;
   }
 
-  svg {
+  svg{
     width: auto;
     height: 40px;
-
-    path {
+    path{
       fill: var(--secundariaPrincipal);
     }
   }
 
-  @media screen and (max-width: 719px) {
+  @media screen and (max-width: 719px){
     display: none;
   }
 }
 
-.content-bar {
+.content-bar{
   visibility: visible;
   height: 8px;
   background: var(--primariaPrincipal);
@@ -221,7 +159,7 @@
   opacity: 1;
   transition-delay: 0.5s;
 
-  &:before {
+  &:before{
     content: "";
     background-color: rgba(black, .02);
     width: 100vw;

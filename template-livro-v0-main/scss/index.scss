@@ -8,7 +8,7 @@ section {
   margin-bottom: 5rem;
 }
 
-#cover>.container {
+#cover > .container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -44,7 +44,7 @@ section {
 .cover-header {
   flex-grow: 1;
 
-  >span {
+  > span {
     font-variant: small-caps;
     text-transform: lowercase;
     color: var(--primariaPrincipal);
@@ -60,7 +60,7 @@ section {
     }
   }
 
-  >.cover-title {
+  > .cover-title {
     font-family: $sans;
     color: var(--primariaPrincipal);
     font-size: 2rem;
@@ -68,13 +68,13 @@ section {
     margin-bottom: 1.5rem;
   }
 
-  >.cover-author {
+  > .cover-author {
     font-weight: $light;
     font-size: 1.15rem;
     line-height: 1.4;
   }
 
-  >.cover-info {
+  > .cover-info {
     font-family: $sans;
     line-height: 1.5;
     font-size: 0.9rem;
@@ -92,19 +92,19 @@ section {
   }
 
   @media screen and (min-width: 1024px) {
-    >span {
+    > span {
       font-size: 1.5rem;
     }
 
-    >.cover-title {
+    > .cover-title {
       font-size: 3rem;
     }
 
-    >.cover-author {
+    > .cover-author {
       font-size: 1.6rem;
     }
 
-    >.cover-info {
+    > .cover-info {
       font-size: 1.15rem;
     }
   }
@@ -115,11 +115,11 @@ section {
     padding-left: 9vw;
     max-width: 50%;
 
-    >.cover-title {
+    > .cover-title {
       font-size: 3.75rem;
     }
 
-    >.cover-author {
+    > .cover-author {
       margin-bottom: 6rem;
     }
   }
@@ -156,23 +156,16 @@ section {
       font-size: 1rem;
     }
 
-    >.info-btn {
+    > .info-btn {
       width: 200px;
 
       &:before {
         @extend %fontAwesome;
         margin-right: 0.5rem;
       }
-
-      // inicio alterações hover dos botões - livia
-      &:hover {
-        background-color: var(--secundariaPrincipal);
-        color: white;
-      }
-      // fim alterações hover dos botões - livia
     }
 
-    >a.info-btn {
+    > a.info-btn {
       width: calc(198px - 3rem);
     }
 
@@ -190,7 +183,7 @@ section {
   }
 
   @media screen and (min-width: 1024px) {
-    >.container-content {
+    > .container-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -233,24 +226,24 @@ section {
     display: flex;
     margin: 1rem 1rem 2rem;
 
-    >.author-bio {
+    > .author-bio {
       flex: 1 1 70%;
       text-align: left;
       margin-right: 1rem;
       font-weight: $light;
 
-      >h3 {
+      > h3 {
         color: var(--primariaPrincipal);
         margin-top: 0;
         font-size: 1.125rem;
       }
 
-      >p {
+      > p {
         font-family: $sans;
         font-size: 1rem;
       }
 
-      >.author-links {
+      > .author-links {
         color: var(--secundariaPrincipal);
         margin-top: 2rem;
         font-weight: $regular;
@@ -311,7 +304,6 @@ section {
 
     @media screen and (min-width: 1024px) {
       top: 16rem;
-
       &:before {
         font-size: 3rem;
       }
@@ -371,7 +363,7 @@ section {
   }
 
   @media screen and (min-width: 1024px) {
-    >.container-content {
+    > .container-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -401,7 +393,7 @@ section {
       display: flex;
       flex-wrap: nowrap;
 
-      >div {
+      > div {
         flex: 1 1 270px;
         margin-right: 2rem;
 
@@ -462,7 +454,6 @@ section {
             margin-right: 12px;
           }
         }
-
         #fecha {
           background: url("../svg/fecha.svg") center no-repeat;
           width: 21px;
@@ -506,7 +497,6 @@ section {
             margin-right: 12px;
           }
         }
-
         @media screen and (min-width: 720px) {
           flex-direction: row;
           justify-content: space-between;
@@ -515,7 +505,6 @@ section {
             text-align: left;
           }
         }
-
         @media screen and (min-width: 1024px) {
           flex-direction: row;
           justify-content: space-between;
@@ -527,7 +516,6 @@ section {
         }
       }
     }
-
     @media screen and (min-width: 1024px) {
       .container {
         padding: 0 80px;

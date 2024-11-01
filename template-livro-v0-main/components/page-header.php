@@ -41,15 +41,11 @@ $autorLivro = "Nome do Autor";
           echo $titulo;
         } ?>
       </div>
-      <button id="nav-ajustes" class="btn-terciary" data-modal="#modal-ajustes" data-state="off"><span>Ajustes de leitura</span></button>
+      <button id="nav-ajustes" class="btn-terciary" data-modal="#modal-ajustes"><span>Ajustes de leitura</span></button>
       <a class="nav-logo" href="https://sead.ufes.br/" target="_blank" title="Abrir site da Sead em nova aba">
         <span>Sead</span>
         <?php include('svg/sead.svg'); ?>
       </a>
-    </div>
-
-    <div class="titulo-livro-navbar">
-      <span class="nav-title"><?php echo $tituloLivro?></span>
     </div>
 
     <div class="content-bar"></div>

@@ -43,9 +43,9 @@ menuClose.addEventListener("click", function () {
       "habilitado" == menu.classList[1] &&
       !event.target.closest("#menu, #nav-menu") &&
       (menu.classList.remove("habilitado"),
-        menu.classList.add("desabilitado"),
-        navMenu.focus(),
-        navMenu.classList.remove("desabilitado"));
+      menu.classList.add("desabilitado"),
+      navMenu.focus(),
+      navMenu.classList.remove("desabilitado"));
   });
 const url = document.URL.split("/").pop().split("#")[0].split("?")[0],
   sumarioLinks = document.querySelectorAll(".sumario > li > a");
@@ -96,41 +96,3 @@ notasLinks.forEach((item) => {
   refLinks.forEach((item) => {
     item.addEventListener("click", scrollNotas);
   });
-
-//alteracoes livia
-const titulo = document.querySelector('.titulo-livro-navbar');
-let prevScrollpos = window.scrollY;
-
-window.onscroll = function () {
-  const currentScrollPos = window.scrollY;
-  const button = document.getElementById('nav-ajustes');
-
-  console.log('Previous Scroll Position:', prevScrollpos);
-  console.log('Current Scroll Position:', currentScrollPos);
-
-  // Verifica se o modal está fechado
-  if (prevScrollpos > currentScrollPos && !button.classList.contains('on')) {
-    // Rolagem para cima e o modal está fechado
-    titulo.classList.remove('hidden');
-  } else if (!button.classList.contains('on')) {
-    // Rolagem para baixo e o modal está fechado
-    titulo.classList.add('hidden');
-  }
-
-  prevScrollpos = currentScrollPos;
-};
-
-function toggleModal() {
-  const button = document.getElementById('nav-ajustes');
-
-  // Alterna a classe 'on' para indicar que o modal está aberto ou fechado
-  button.classList.toggle('on');
-
-  if (button.classList.contains('on')) {
-    // Se o modal está aberto, esconde o título
-    titulo.classList.add('hidden');
-  } else {
-    // Quando o modal fecha, exibe o título imediatamente
-    titulo.classList.remove('hidden');
-  }
-}

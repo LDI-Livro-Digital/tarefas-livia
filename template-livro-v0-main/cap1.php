@@ -3,21 +3,49 @@ $capitulo = "Capítulo 1";
 $titulo = "Energia";
 $abertura = "(img/abertura-global.png)";
 include("components/page-header.php"); 
+echo '<script defer type="module" src="scripts/modulo.js"></script>';
 ?>
 
 <h2 id = "cap-1-1">1.1 Geração hidroelétrica</h2>
 <p>Considerada uma fonte renovável, a hidroeletricidade é o tipo de energia mais eficiente e consiste em aproveitar a energia potencial ou cinética da água, transformando-a em energia mecânica e posteriormente em eletricidade. Neste tópico, discutiremos os aspectos da geração de energia elétrica pelo uso da água, os problemas ambientais e suas relações socioeconômicas.</p>
 <p>Segundo dados do Ministério de Minas e Energia (MME), o Brasil possui cerca de 560 usinas e subestações e 1079 linhas de transmissão que formam a rede do Operador Nacional do Sistema Elétrico. Até 2005 a capacidade instalada dessas usinas alcançou a potência total de 84.177 MW (megawatts), dos quais 70.014 MW em usinas hidrelétricas e o restante em usinas termelétricas (14.163 MW). Atualmente, o Brasil possui uma rede básica de transmissão de energia que se estende a mais de 104 mil km, levando energia com tensões de 230 kV a 750 kV (quilovolt).</p>
 <p>A <span class = "bold">Figura 1.1</span> apresenta a Energia Natural Afluente, ENA, dos recursos hídricos da região Sudeste/Centro-Oeste. Segundo o Boletim de Monitoramento do Sistema Elétrico do Brasil no mês de novembro de 2012, com o início da estação chuvosa, houve uma elevação do volume de precipitação nas principais bacias da região Sudeste/Centro-Oeste, contudo, não se observou um aumento significativo das vazões em virtude do longo período sem chuvas. Como podemos ver na Figura 1.1, a ENA bruta teve o valor médio de 22.841 MW, ou seja, de 84% MLT (vazão média de longo termo). Considerando o <em>ranking</em> histórico de 82 anos, esse valor corresponde somente à 58ª posição.</p>
-<br><figure>
+<br>
+
+<!-- <elemento-citacao
+texto="Entre 1320 e 1450 abateu-se sobre a Europa uma conjunção de desgraças, privações, epidemias[peste negra], guerras, um aumento brutal da mortalidade, diminuição da produção de metais preciosos e o avanço dos Turcos. Desafios esses que foram vencidos com coragem e gênio. A história do Renascimento é a história desses desafio se dessas respostas. A crítica ao pensamento clerical da Idade Média, a recuperação demográfica, os progressos técnicos, a aventura marítima, uma estética nova, um cristianismo reelaborado e rejuvenescido: eis os principais elementos da respostado Ocidente às tão variadas dificuldades que nos eu caminho haviam se acumulado.3"
+>
+</elemento-citacao> -->
+
+<!-- <figure>
     <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.1. </span>Energia Natural Afluente, ENA, da região Sudeste/Centro-Oeste dos anos de 2011 e 2012. Fonte: <a class ="ref" href="https://www.gov.br/mme/pt-br" target="_blank" alt = "ir para o site do Ministério de Minas e Energia">Ministério de Minas e Energia</a>.</figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.1"
+    legenda = "Energia Natural Afluente, ENA, da região Sudeste/Centro-Oeste dos anos de 2011 e 2012."
+    texto-da-fonte = "Ministério de Minas e Energia"
+    link-da-fonte = "https://www.gov.br/mme/pt-br"
+    texto-alternativo-para-fonte = "ir para o site do Ministério de Minas e Energia"
+>
+</figura-com-legenda>
 <p>A <span class = "bold">Figura 1.2</span> apresenta dados da Energia Armazenada em Reservatório, EAR, em função do mês em diferentes anos. Segundo os dados do Boletim de Monitoramento do Sistema Elétrico Brasileiro, o intercâmbio das regiões Sul e Sudeste/Centro-Oeste no mês de novembro de 2012 provocou uma elevação nos reservatórios na região Sul, com um decréscimo de 5,1% na região Sudeste/Centro-Oeste. Além disso, observa-se que o armazenamento atingiu o menor valor para o mês desde 2001 (31,9 pontos percentuais de EAR). Ademais, a depreciação dos reservatórios na região Sudeste/Centro-Oeste foi agravada em virtude dos intercâmbios com as regiões Nordeste e Norte. </p>
-<br><figure>
+<br>
+<!-- <figure>
 <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.2. </span>Recursos hídricos das regiões Sudeste e Centro-oeste. Fonte: <a class ="ref" href="https://www.gov.br/mme/pt-br" target="_blank" alt = "ir para o site do Ministério de Minas e Energia">Ministério de Minas e Energia</a>.</figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.2"
+    legenda = "Recursos hídricos das regiões Sudeste e Centro-oeste."
+    texto-da-fonte = "Ministério de Minas e Energia"
+    link-da-fonte = "https://www.gov.br/mme/pt-br"
+    texto-alternativo-para-fonte = "ir para o site do Ministério de Minas e Energia"
+></figura-com-legenda>
 <p>A <span class = "boldSecundario">Tabela 1.1</span> apresenta dados da Energia Armazenada em Reservatório no final do mês de novembro de 2012 e capacidade total dos reservatórios brasileiros. Os dados da Tabela 1.1 mostram que a região Sudeste/Centro-Oeste apresenta uma capacidade máxima em megawatts mês de 201.265 MW/mês, o que corresponde a 70,1% da capacidade total brasileira, isso indica a sua grande importância para o sistema elétrico brasileiro.</p>
 <p><span class = "boldSecundario">Tabela 1.1. </span>Energia Armazenada em Reservatório, EAR.</p>
 <figure class = "tabela">
@@ -60,26 +88,55 @@ include("components/page-header.php");
     </table>
 </figure><br>
 <p>Como podemos observar na <span class = "bold">Figura 1.3</span>, que mostra a matriz de energia elétrica no Brasil, 69,73% de toda a energia produzida no país vem das hidrelétricas e os demais 30,27% estão distribuídos nas demais fontes, das quais 18,92% são atribuídos ao petróleo, ao gás natural e ao carvão mineral. Fontes essas sobre as quais discutiremos na próxima seção.</p>
-<br><figure>
+<br>
+<!-- <figure>
     <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.3. </span>Matriz de energia elétrica brasileira. Fonte: <a class ="ref" href="https://www.gov.br/aneel/pt-br" target="_blank" alt = "ir para o site da Agência Nacional de Energia Elétrica">Agência Nacional de Energia Elétrica, ANEEL</a>.</figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.3"
+    legenda = "Matriz de energia elétrica brasileira."
+    texto-da-fonte = "Agência Nacional de Energia Elétrica, ANEEL"
+    link-da-fonte = "https://www.gov.br/aneel/pt-br"
+    texto-alternativo-para-fonte = "ir para o site da Agência Nacional de Energia Elétrica"
+></figura-com-legenda>
+
 <p><span class = "bold">Como, então, é gerada energia elétrica nas usinas hidrelétricas?</span> O Brasil possui grandes quantidades de rios com desníveis acentuados, o que possibilita a sua utilização de forma econômica e mais eficiente. O processo consiste em aproveitar a energia potencial ou cinética da água, transformando-a em energia mecânica pelas turbinas e finalmente em eletricidade pelo gerador.  A função basicamente da força das águas é gerar energia elétrica nas usinas, o que as fazem ser denominadas hidrelétricas. As usinas hidrelétricas possuem uma barragem ou represa para conter um volume grande de água do rio e também para controlar o fluxo (vazão) dessas águas. Por ser um dos sistemas mais baratos de produção de energia, são inúmeras as suas vantagens, entretanto as hidrelétricas provocam impactos ambientais, tanto na fase de construção como na fase de operação.</p>
 <p>A região próxima da usina pode sofrer severo impacto ambiental, gerando situação danosa aos ecossistemas existentes na região. No Brasil, por exemplo, a usina de Belo Monte, que está sendo construída na Bacia do Rio Xingu, em sua parte paraense, está envolvida em uma polêmica há mais de 20 anos, mesmo após o Ministério do Meio Ambiente (MMA), conceder a licença ambiental para sua construção em fevereiro de 2010. Muitos ambientalistas e indígenas da região envolveram-se em conflitos com a Empresa Norte Energia, responsável pela construção da usina. Durante a conferência Rio +20, realizada na cidade do Rio de Janeiro em junho de 2012, o cacique Raoni Metuktire realizou muitas manifestações contra a construção da usina de Belo Monte, solicitando a sua suspensão devido ao descumprimento das condicionantes.</p>
 <p>No interior da represa, aquedutos inclinados são instalados para levar a água para as turbinas. Durante o seu funcionamento, a água desce pelos tubos e faz girar o sistema de hélices, movimentando o eixo dos geradores que produzem a energia elétrica. Perto dos geradores, são instalados os transformadores, equipamentos que acumulam e enviam a energia elétrica para os cabos das linhas de transmissão. A <span class = "bold">Figura 1.4</span> representa o esquema do funcionamento de uma usina hidrelétrica. Após passar pelas turbinas e as movimentar, as águas represadas voltam para o rio.</p>
 <p>Com 14 mil MW de capacidade de geração, Itaipu é a segunda maior usina hidrelétrica do mundo em potência instalada, atrás somente de uma usina na China, conhecida como Três Gargantas. A hidroelétrica de Itaipu está situada na Bacia do rio Paraná, na “tríplice fronteira” formada pelos limites territoriais entre o Brasil, Paraguai e Argentina sendo construída pelo Brasil e Paraguai. Sua administração continua com os dois países, e parte da energia destinada ao Paraguai é vendida para o Brasil, devido ao seu maior consumo. </p>
-<figure>
+<!-- <figure>
 <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.4.</span> Esquema de uma usina hidrelétrica.</figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.4"
+    legenda = "Esquema de uma usina hidrelétrica."
+>
+</figura-com-legenda>
 
 <br>
-<div class="atv">
+<!-- <div class="atv">
     <h3 class = "atividade">Atividade 1.1</h3>
     <p>Explique como é gerada energia elétrica nas usinas hidrelétricas.</p>
     <h3 class = "atividade">Atividade 1.2</h3>
     <p>Com respeito à usina hidrelétrica de Itaipu, pesquise, em fontes confiáveis, quais foram os impactos ambientais da região inundada pelas águas da represa dessa usina.</p><br>
-</div>
+</div> -->
+<elemento-atividade
+numero-atividade="1.1" 
+texto-atividade="Explique como é gerada energia elétrica nas usinas hidrelétricas."
+>
+</elemento-atividade>
+<elemento-atividade
+numero-atividade="1.2" 
+texto-atividade="Com respeito à usina hidrelétrica de Itaipu, pesquise, em fontes confiáveis, quais foram os impactos ambientais da região inundada pelas águas da represa dessa usina."
+>
+</elemento-atividade>
+
 
 <h2 id = "cap-1-2">1.2 Combustível fóssil</h2>
 <p>Os combustíveis fósseis são considerados fontes não renováveis de energia, pois não podem, em curto prazo, ser repostos ao planeta. Eles são constituídos por depósitos naturais de petróleo, gás natural e carvão. Os depósitos naturais de petróleo, por exemplo, se formaram há milhões de anos pela decomposição de matéria orgânica de origem animal e vegetal, os quais foram submetidos a altas temperaturas e pressões na nossa crosta terrestre.</p>
@@ -93,17 +150,34 @@ include("components/page-header.php");
 <p>A Petrobras foi criada em 1953 em um contexto histórico e político, tornando-se a obra magna do nacionalismo político-econômico do então presidente Getúlio Vargas. Em 1951, Vargas enviou ao congresso um projeto de lei que estabelecia o monopólio estatal sobre a perfuração e o refino do petróleo por meio da empresa Petrobras, uma empresa de capital misto cuja maioria das ações seria controlada pelo Estado. Ocorreram muitos conflitos durante a implementação dessa lei, até que, em 3 de outubro de 1953, ela foi sancionada. A produção de petróleo nos três primeiros anos de funcionamento da Petrobrás foi muito grande, sendo três vezes maior do que a produção desde 1939, quando o primeiro poço foi aberto e explorado no Brasil.</p>
 <p>A origem da palavra petróleo é latina e significa <em>petra</em> (pedra) e <em>oleum</em> (óleo), ou seja, óleo de pedra. O petróleo tem como principais componentes substâncias conhecidas como hidrocarbonetos, formados basicamente pelos elementos carbono e hidrogênio. O óleo pode ser classificado por meio do grau API (desenvolvido pela <em>American Petroleum Institute</em>), que relaciona a densidade do óleo em relação à densidade relativa do petróleo, medida a 15,6 °C. É classificado como leve se o grau API for > 31,1; médio se estiver entre 22,3 – 31,1; pesado entre 10,0 – 22,3 e extrapesado < 10,0.</p>
 <p>A <span class = "bold">Figura 1.5</span> apresenta a evolução do preço do petróleo ao longo das últimas duas décadas, entre os anos de 1995 a 2012. Na década de 90 o preço do barril de petróleo não variava muito, entre 11 a 34 reais, mas no final dessa década o preço do barril começou a subir apresentando picos nos anos de 2003 e 2008. Em 2009, o preço teve uma queda bruta passando de 210 reais para aproximadamente 100 reais, uma variação de mais de 100%. Nos últimos três anos, os valores vêm crescendo e atualmente estão em torno de 400 reais.</p>
-<figure>
+<!-- <figure>
 <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.5. </span>Evolução do preço do petróleo entre os anos de 1995 a 2012. Fonte: <a class="ref" alt="Abrir site em nova aba" target="_blank" href="http://www.indexmundi.com">Index Mundi</a></figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.5"
+    legenda = "Evolução do preço do petróleo entre os anos de 1995 a 2012."
+    texto-da-fonte = "Index Mundi"
+    link-da-fonte = "http://www.indexmundi.com"
+    texto-alternativo-para-fonte = "Abrir site em nova aba"
+></figura-com-legenda>
+
 <p>A vantagem do uso do petróleo está no fato dele ser um líquido, o que facilita o seu transporte. Isso promoveu o desenvolvimento de veículos movidos por combustível fóssil, tais como: automóveis, aviões, barcos, dentre outros. Os derivados do petróleo, usados atualmente como combustível, apresentam também a vantagem de serem relativamente limpos, pois a maior parte dos resíduos de enxofre e metais fica nos subprodutos, durante o processo de refino do petróleo. Por outro lado, a combustão desses combustíveis no interior dos motores dos veículos libera para a atmosfera uma grande quantidade de poluentes gasosos, tais como: NO<sub>x</sub>, CO<sub>2</sub>, CO, SO<sub>2</sub>. Ademais, durante o processo de extração, o petróleo pode contaminar o solo ou os oceanos quando há derramamento, causando enormes problemas para os ecossistemas marinhos.</p>
 <p>A <span class = "bold">Figura 1.6</span> demonstra o derramamento de petróleo que ocorreu em 2010, no fundo do mar devido a um problema no poço de extração de petróleo na costa dos Estados Unidos, quando a plataforma Deepwater Horizon da empresa British Petroleum, localizada numa região de intensa exploração de petróleo, a 65 km da costa americana (Estado da Louisiana), explodiu, causando a morte de 11 funcionários. Dois dias depois, a plataforma afundou a aproximadamente 80 quilômetros da costa da Louisiana, sul dos Estados Unidos. Em consequência do acidente, o sistema automático que deveria fechar imediatamente a válvula de segurança do poço no fundo do mar não funcionou. Assim, o poço ficou aberto por vários dias vazando quase 1 milhão de litros de petróleo por dia, provocando o pior acidente deste tipo nos Estados Unidos. O sistema de válvula poderia ser fechado manualmente, contudo, o problema era que a válvula estava a 1,5 km de profundidade, o que se mostrou de difícil resolução. Após várias tentativas mal sucedidas o poço foi fechado, mas o desastre foi inevitável, formando uma enorme mancha de óleo que se aproximou do litoral americano. Desde então, o óleo vem prejudicando a fauna marinha, o turismo e a pesca na região.</p>
 <p>No Brasil, o derramamento de petróleo é um problema. Recentemente, em 2012 houve um vazamento na área do pré-sal (profundidade de 2.140 metros), na bacia de Santos, SP (localizada a 300 km da costa brasileira). Os especialistas afirmaram que foram derramados por volta de 160 barris de petróleo na região, contudo o petróleo não chegou à costa brasileira.  Outro evento ocorrido no Brasil foi o caso envolvendo a empresa Chevron em novembro de 2011, quando houve o derramamento de cerca de 2.400 barris de petróleo na bacia de Campos, no litoral do Rio de Janeiro. O Ibama (Instituto Brasileiro de Meio Ambiente) na época multou a empresa em 60 milhões de reais, pois o vazamento ocorreu devido à perfuração de um novo poço na mesma região do campo de Frade, onde já se produzia petróleo, o que provocou um excesso de pressão no local.</p>
-    <figure>
+    <!-- <figure>
     <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
         <figcaption><span class = "bold">Figura 1.6. </span>Imagem aérea da região do derramamento de petróleo no litoral americano provocado pela empresa British Petroleum em abril de 2010. Fonte: Revista Veja.</figcaption>
-    </figure>
+    </figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.6"
+    legenda = "Imagem aérea da região do derramamento de petróleo no litoral americano provocado pela empresa British Petroleum em abril de 2010."
+    texto-da-fonte = "Revista Veja"
+></figura-com-legenda>
 
 <p>O carvão mineral é outra fonte de combustível e sua história no Brasil começa no século XVIII em 1795. O Brasil apresenta 8 jazidas de maior destaque e diversas menores, e 88% dos recursos estão localizados no estado do Rio Grande do Sul. O principal uso do carvão no Brasil ocorre em usinas geradoras de eletricidade, as termelétricas, onde esse é queimado de forma eficiente e completa. Os demais consumidores são: indústria de cimento; petroquímica, indústria de celulose e papel; indústria de alimentos e indústria cerâmica. No Brasil, o carvão metalúrgico para uso siderúrgico, desde 1991, é integralmente importado. No caso do carvão energético, inversamente, é quase todo produzido no país. Isso se deve ao fato de que nossas jazidas, de reduzidas dimensões, com camadas carboníferas irregulares, de pequena espessura e pouca continuidade lateral, têm muita dificuldade em produzir em alta escala.</p>
 <p>Apesar do petróleo e do gás natural serem ainda mais usados e possuírem um desenvolvimento mais avançado, as reservas mundiais de carvão ocupam a primeira colocação em abundância, superando o petróleo em cerca de quatro vezes. Essas reservas estão distribuídas geograficamente sobre o planeta de forma menos concentrada em relação as reservas de petróleo e gás. </p>
@@ -111,10 +185,14 @@ include("components/page-header.php");
 <p>Um dos assuntos, que atualmente recebe muita atenção, é a descarbonização, processo pelo qual se tenta reduzir a quantidade de <span class="nobreak">CO<sub>2</sub></span> presente na atmosfera. A descarbonização consiste em isolar o CO<sub>2</sub> e armazená-lo de forma a não ser prejudicial ao ecossistema e ser economicamente viável. Após a queima dos combustíveis fósseis, o CO<sub>2</sub> pode ser separado dos gases de exaustão por absorção em aminas orgânicas, reagindo e formando carbamatos. Em seguida, o carbamato é aquecido e libera novamente a amina e CO<sub>2</sub>, que podem ser armazenados em diferentes lugares, por exemplo, no fundo do mar, em aquíferos, em reservatórios de petróleo e gás. A injeção de <span class="nobreak">CO<sub>2</sub></span> já está sendo realizada em alguns campos petrolíferos para forçar o fluxo do óleo pelo reservatório até o poço, intensificando a sua recuperação.</p>
 
 <br>
-<div class="atv">
+<!-- <div class="atv">
     <h3 class = "atividade">Atividade 1.3</h3>
     <p>Cite três fontes não renováveis de energia.</p><br>
-</div>
+</div> -->
+<elemento-atividade
+numero-atividade="1.3"
+texto-atividade="Cite três fontes não renováveis de energia."
+></elemento-atividade>
 
 <h2 id = "cap-1-3">1.3 Energia eólica</h2>
 <p>A primeira turbina eólica ligada à rede pública com capacidade para geração de energia elétrica comercial foi instalada na Dinamarca, em 1976. De lá para cá, o potencial eólico só vem crescendo e atualmente estão em funcionamento mais de 40 mil turbinas eólicas em todo o mundo. Como já foi mencionado, o planeta vive um momento único de consciência em torno da importância da adoção de fontes de energia renováveis. </p>
@@ -187,21 +265,41 @@ include("components/page-header.php");
 </figure>
 <p>As turbinas utilizadas para geração de energia eólica tiveram várias configurações, dentre essas: turbina de eixo de rotação vertical, turbina de eixo de rotação horizontal, turbinas de mono pá, turbina de di e tri pás, turbina com gerador síncrono, turbina com gerador de indução etc. Entretanto, as pesquisas mostraram que a melhor configuração para o projeto de turbina eólica é o que apresentava o seguinte perfil: eixo de rotação horizontal, hélice com três pás, gerador de indução, alinhamento ativo e estrutura rígida ou não maleável, como ilustrado na <span class = "bold">Figura 1.7</span>. A potência máxima gerada pode ser obtida ajustando o ângulo de passo das pás da hélice e em alguns casos, esse dispositivo é usado para limitar a potência gerada.</p>
 <p>As primeiras turbinas eólicas tinham uma capacidade de geração elétrica entre 10 kW e 50 kW de potência nominal, aquelas desenvolvidas em escala comercial. Já nos primeiros anos da década de 90, essa potência saltou para 100 a 300 kW, ou seja, um aumento de 100 - 500% e em 1995, a potência já era de 300 a 750 kW. Dois anos depois, em 1997, as turbinas comercializadas tinham potência de 1 a 1,5 MW. Atualmente, alguns países da Europa já possuem protótipos em operação com potência da ordem de 5 MW.</p>
-<figure>
+<!-- <figure>
 <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.7. </span>Esquema de uma turbina eólica. Fonte: Centro Brasileiro de Energia Eólica - CBEE / UFPE. 2000. Disponível em: Eólica(adaptado)</figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.7"
+    legenda = "Esquema de uma turbina eólica."
+    texto-da-fonte = "Centro Brasileiro de Energia Eólica - CBEE / UFPE. 2000. Disponível em: Eólica(adaptado)"
+></figura-com-legenda>
+
 <p>A <span class = "bold">Figura 1.8</span> representa a energia elétrica gerada em usinas eólicas nas regiões Nordeste e Sul do Brasil, nos anos 2011 e 2012. Como podemos observar, nesses anos, a região Nordeste apresentou sempre valores maiores em relação à produção de energia da região Sul, além disso, a capacidade instalada na região Nordeste foi em média 350 MW superior, nos dois últimos anos. Isso acontece porque as “jazidas” de vento do Brasil estão entre as melhores do mundo, pois são compostas por ventos ditos “bem comportados e elegantes” e porque 90% do potencial eólico do Brasil está localizado na região Nordeste (litoral dos estados do Ceará e Rio Grande do Norte e em algumas partes do semiárido nordestino).</p>
-<figure>
+<!-- <figure>
     <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1"><br><br><br>
     <img src = "https://placehold.co/1000x400" alt = "audiodescrição 1-1">
     <figcaption><span class = "bold">Figura 1.8. </span>Energia gerada por mês em usinas eólicas instaladas nas regiões: (A) Nordeste e (B) Sul. Fonte: MME.</figcaption>
-</figure>
+</figure> -->
+<figura-com-legenda
+    link-da-imagem = "https://placehold.co/1000x400"
+    texto-alternativo-para-imagem="audiodescrição 1-1"
+    numero-figura = "1.8"
+    legenda = "Energia gerada por mês em usinas eólicas instaladas nas regiões: (A) Nordeste e (B) Sul."
+    texto-da-fonte = "MME"
+></figura-com-legenda>
 <br>
-<div class = "atv">
+
+<!-- <div class = "atv">
     <h3 class = "atividade">Atividade 1.4</h3>
     <p>Atualmente, qual é a melhor configuração para uma turbina eólica?</p><br>
-</div>
+</div> -->
+<elemento-atividade
+numero-atividade="1.4"
+texto-atividade="Atualmente, qual é a melhor configuração para uma turbina eólica?"
+></elemento-atividade>
 
 <h2 id = "cap-1-4">1.4 Energia Nuclear</h2>
 <p>O mundo tomou conhecimento da energia nuclear em meados 1945, quando do lançamento e detonação da bomba atômica na cidade de Hiroshima no Japão, a primeira explosão de uma bomba atômica na história da humanidade. Nagasaki, outra cidade japonesa, foi atingida três dias depois, em 9 de agosto. Mas, o primeiro teste nuclear da história foi realizado pelos Estados Unidos, no dia 16 de julho de 1945.</p>
@@ -258,9 +356,15 @@ include("components/page-header.php");
 <p>Inicialmente, um próton atinge um átomo de magnésio, Mg, transmutando em um núcleo composto de alumínio-27*,  <sup class = "esquerda-dois">27</sup><sub>13</sub> Al*que pode sofrer decaimento de várias formas, e uma delas é a formação do alumínio-27, <sup class = "esquerda-dois">27</sup><sub>13</sub> Al estável pela liberação de radiação gama, <span class="nobreak"><sup class = "esquerda">0</sup><sub>0</sub> γ.</span></p>
 <p>Finalmente, vamos discutir um pouco sobre os raios X, um tipo de radiação eletromagnética com energia menor do que a da radiação gama, por exemplo.</p>
 <p>Como mencionado anteriormente, quem detectou pela primeira vez os raios X foi o físico alemão Wilhelm C. Röntgen. Em virtude do desconhecimento da natureza desta radiação, a comunidade científica da época propôs a denominação de raios X. Essa radiação foi descoberta durante os experimentos que Röentgen fazia em seu laboratório estudando o fenômeno da luminescência produzida por raios catódicos. O equipamento estava recoberto de tal forma que nenhuma luz exterior podia penetrar a câmara escura, a qual tinha em seu interior um pedaço de papel recoberto com o composto platinocianeto de bário, <span class="nobreak">BaPt(CN)<sub>4</sub></span>. Durante a aplicação de certa voltagem, os elétrons eram acelerados com energia cinética suficiente no interior do tubo para produzir radiação capaz de marcar a chapa fotográfica.</p>
-<div class = "box">
+<!-- <div class = "box">
     <p><span class = "bold">Contador Geiger</span> é um instrumento usado para detectar as radiações beta e gama, que têm energia suficiente para penetrar a janela do equipamento. Há uma câmara dentro do equipamento com gás a baixa pressão que, ao ser atingido pela radiação sofre ionização. Os íons formados por sua vez podem completar o circuito elétrico do sistema, que é amplificado, e traduzido para uma indicação visual (agulha, lâmpada) ou sonora (clique).</p>
-</div><br>
+</div><br> -->
+
+<elemento-nota
+titulo="Contador Geiger"
+texto="é um instrumento usado para detectar as radiações beta e gama, que têm energia suficiente para penetrar a janela do equipamento. Há uma câmara dentro do equipamento com gás a baixa pressão que, ao ser atingido pela radiação sofre ionização. Os íons formados por sua vez podem completar o circuito elétrico do sistema, que é amplificado, e traduzido para uma indicação visual (agulha, lâmpada) ou sonora (clique).">
+</elemento-nota>
+
 <p>A fissão nuclear é um processo pelo qual um núcleo atômico com grande massa se divide produzindo núcleos com massa menores. A fissão nuclear ocorre quando um núcleo instável absorve um nêutron. Como o nêutron não apresenta carga elétrica, atravessa a nuvem eletrônica da eletrosfera do átomo facilmente e, assim consegue penetrar no núcleo atômico provocando sua fissão.</p>
 <p>Enrico Fermi (1901 - 1954) realizando experimentos com alvo de urânio descobriu que, ao direcionar nêutrons para um alvo de urânio, núcleos mais leves eram produzidos. Ele ainda não sabia que o que observara era a fissão nuclear dos átomos de urânio-235. A reação de fissão dos átomos de urânio-235 é representada na equação 1.3 a seguir:</p>
 <!-- INSERIR EQUAÇÃO 1.3 -->
@@ -424,7 +528,9 @@ include("components/page-header.php");
     <p>Cite três vantagens de se usar célula a combustível como fonte alternativa de geração de energia.</p>
 </div><br>
 
-<h2 id = "conhecimento-1">Desenvolvendo e aplicando o conhecimento</h2>
+<!-- <h2 id = "conhecimento-1">Desenvolvendo e aplicando o conhecimento</h2> -->
+<elemento-subtitulo id="conhecimento-1"
+texto="Desenvolvendo e aplicando o conhecimento"></elemento-subtitulo>
 <p><span class = "bold">1. </span>Sabe-se que o uso humano primário de energia corresponde a 4,3 × 10<sup>17</sup> kJ/ano, o que está associado ao consumo 3,7 × 10<sup>17</sup> kJ/ano de energia oriunda de combustíveis fósseis e 6,0 × 10<sup>16</sup> kJ/ano de outras fontes. Calcule a energia usada pelos seres humanos em um dia e compare com a energia fornecida pelo Sol também em um dia. Dado: energia fornecida pelo Sol por ano = 54,4 × 10<sup>20</sup> kJ.</p>
 <p><span class = "bold">2. </span>Quais são os três tipos de processos utilizados para produzir o U-235 na porcentagem necessária para uma usina nuclear?</p>
 <p><span class = "bold">3. </span>Quais são as semirreações em uma célula a combustível de hidrogênio/oxigênio?</p>
@@ -436,9 +542,45 @@ include("components/page-header.php");
 <p><span class = "bold">9. </span>Quais são os problemas com respeito às células a combustíveis que utilizam hidrogênio como combustível?</p>
 <p><span class = "bold">10. </span>Cite cinco tipos de célula combustível existentes e informe suas principais utilizações, vantagens e desvantagens.</p>
 
+<titulo-referencias id = "referencias-1"></titulo-referencias> <!-- o id faz o sumário acessavel -->
+<!-- <h2 id = "referencias-1">Referências</h2> -->
+<referencia-livro autores="PERUZZO, F. M.; CANTO, E. L."
+titulo-livro="Química na abordagem do cotidiano. Química Geral e Inorgânica"
+edicao="4"
+local-de-publicacao="São Paulo"
+editora="Moderna"
+ano-publicacao="2010"></referencia-livro>
 
-<h2 id = "referencias-1">Referências</h2>
-<p>PERUZZO, F. M.; CANTO, E. L. <strong>Química na abordagem do cotidiano. Química Geral e Inorgânica,</strong> Ed. Moderna, 4ª edição, vol. 1, São Paulo, 2010.</p>
+<referencia-livro autores="SPIRO, T. G.; STIGLIANI, W. M."
+titulo-livro="Química Ambiental"
+edicao="2"
+editora="Pearson Pretice Hall"
+local-de-publicacao="São Paulo"
+ano-publicacao="2009"></referencia-livro>
+
+<referencia-livro autores="BOSQUILHA, G. E."
+titulo-livro="Minimanual compacto de química: Teoria e prática"
+edicao="1"
+local-de-publicacao="São Paulo"
+editora="Rideel"
+ano-publicacao="1999"></referencia-livro>
+
+<referencia-livro autores="BRADY, J. E.; SENESE, F."
+titulo-livro="Química: A matéria e suas transformações"
+edicao="5"
+local-de-publicacao="Rio de Janeiro"
+editora="LTC"
+ano-publicacao="2009"></referencia-livro>
+
+<referencia-artigo autores="GRIFFITHS, D."
+titulo-artigo="Introduction to elementary particles"
+ano-publicacao="1987"
+pagina="9"></referencia-artigo>
+
+
+
+
+<!-- <p>PERUZZO, F. M.; CANTO, E. L. <strong>Química na abordagem do cotidiano. Química Geral e Inorgânica,</strong> Ed. Moderna, 4ª edição, vol. 1, São Paulo, 2010.</p>
 <p>SPIRO, T. G.; STIGLIANI, W. M. <strong>Química Ambiental.</strong> 2a edição. São Paulo: Pearson Pretice Hall, 2009.</p>
 <p>BOSQUILHA, G. E. <strong>Minimanual compacto de química: Teoria e prática.</strong> 1ª edição, Ed. Rideel, São Paulo, 1999.</p>
 <p>BRADY, J. E.; SENESE, F. Em colaboração com JESPERSEN, N. D. <strong>Química: A matéria e suas transformações.</strong> Tradução e revisão técnica: SILVA, E. C... [et al.]. 5ª edição, vol. 2, Ed. LTC, Rio de Janeiro, 2009.</p>
@@ -458,7 +600,7 @@ include("components/page-header.php");
 <p>U.S. DEPARTMENT OF ENERGY, OFFICE OF FOSSIL ENERGY. National Energy Technology Laboratory. <strong>Fuel cell Handbook.</strong> 7. Ed. Morgantown, West Virginia. 2004.</p>
 <p>LINARDI M.; WENDT H.; GÖTZ M. <strong>Tecnologia de células a combustível; Química.</strong> Nova, Vol. 23, Nº 4, p. 538-546, 2000.</p>
 <p>KORDESCH, K. & SIMADER, G. <strong>Fuel Cell and their Application</strong>, Ed. VCH, Weinheim, Alemanha, 1996.</p>
-<p>http://www1.eere.energy.gov/hydrogenandfuelcells/applications.html . Acessado em 15 de janeiro de 2013.</p>
+<p>http://www1.eere.energy.gov/hydrogenandfuelcells/applications.html . Acessado em 15 de janeiro de 2013.</p> -->
 
 
 <?php include('components/page-footer.php'); ?>
