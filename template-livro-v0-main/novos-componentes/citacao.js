@@ -6,8 +6,10 @@ class citacao extends HTMLElement {
 
     // cria os elementos
     const citacao = document.createElement('p');
+    const texto = this.getAttribute('texto');
+    const numeroCitacao = this.getAttribute('numero-da-citacao');
 
-    citacao.textContent = this.getAttribute('texto');
+    citacao.innerHTML = `"${texto}" <sup>${numeroCitacao}</sup>`;
 
     // estilo css
     const linkEstilo = document.createElement('link');

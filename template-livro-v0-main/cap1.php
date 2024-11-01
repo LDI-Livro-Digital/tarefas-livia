@@ -13,7 +13,8 @@ echo '<script defer type="module" src="scripts/modulo.js"></script>';
 <br>
 
 <!-- <elemento-citacao
-texto="Entre 1320 e 1450 abateu-se sobre a Europa uma conjunção de desgraças, privações, epidemias[peste negra], guerras, um aumento brutal da mortalidade, diminuição da produção de metais preciosos e o avanço dos Turcos. Desafios esses que foram vencidos com coragem e gênio. A história do Renascimento é a história desses desafio se dessas respostas. A crítica ao pensamento clerical da Idade Média, a recuperação demográfica, os progressos técnicos, a aventura marítima, uma estética nova, um cristianismo reelaborado e rejuvenescido: eis os principais elementos da respostado Ocidente às tão variadas dificuldades que nos eu caminho haviam se acumulado.3"
+texto="Entre 1320 e 1450 abateu-se sobre a Europa uma conjunção de desgraças, privações, epidemias[peste negra], guerras, um aumento brutal da mortalidade, diminuição da produção de metais preciosos e o avanço dos Turcos. Desafios esses que foram vencidos com coragem e gênio. A história do Renascimento é a história desses desafio se dessas respostas. A crítica ao pensamento clerical da Idade Média, a recuperação demográfica, os progressos técnicos, a aventura marítima, uma estética nova, um cristianismo reelaborado e rejuvenescido: eis os principais elementos da respostado Ocidente às tão variadas dificuldades que nos eu caminho haviam se acumulado."
+numero-da-citacao="3"
 >
 </elemento-citacao> -->
 
