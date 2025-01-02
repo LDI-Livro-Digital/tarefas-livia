@@ -1,0 +1,330 @@
+main {
+	font-size: 16px;
+
+	@media only screen and (min-width: 720px) {
+		font-size: 20px;
+	}
+
+	&.page { position: relative; }
+	
+	@media only screen and (min-width: 1288px) {
+		&.page {
+			.container-content {
+				margin-left: calc(272px + 6rem);
+			}
+		}
+	}
+	
+	@media only screen and (min-width: 1642px) {
+		&.page {
+			.container-content {
+				margin-left: auto;
+			}
+		}
+	}
+
+}
+
+// LISTAGEM -------- APERTE CTRL + F para procurar --------
+
+// 1. ELEMENTOS TEXTUAIS
+		// 1.1 Paragráfos, títulos, listas, citação, blocos...
+		// 1.2 Classes de Ajuda
+
+// 2. IMAGENS
+		// 2.1 Imagem Estática
+		// 2.2 Imagem Retrato
+		// 2.3 Imagem lateral
+
+// -------------------------------------------------------------
+
+
+article {
+	font-size: inherit;
+	padding-top: 1rem;
+	min-height: 60vh;
+	color: var(--textoCor);
+
+	// 1.1 Paragráfos, títulos, listas, citação, blocos...
+
+	p {
+		font-size: 1em;
+		line-height: 180%;
+		font-family: $sans;
+		max-width: 730px;
+	}
+
+	p, dd, li, strong{ word-break: break-word;}
+
+	h1 {
+		color: var(--secundariaPrincipal);
+		font-size: 2em;
+		font-weight: $bold;
+		font-family: $sans;
+		word-break: break-word;
+		max-width: 730px;
+		hyphens: auto;
+
+		span {
+			display: block;
+			text-transform: uppercase;
+			// font-variant: small-caps;
+			font-size: 0.5em;
+			font-weight: $light;
+			color: black;
+			font-family: $sans;
+			letter-spacing: 1px;
+		}
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--primariaPrincipal);
+		font-weight: $bold;
+		text-transform: none;
+		line-height: 1.2;
+		font-family: $sans;
+		margin-bottom: 1rem;
+		font-weight: $semibold;
+		max-width: 730px;
+		word-break: break-word;
+		hyphens: auto;
+	}
+
+	h2 {
+		font-size: 1.6em;
+		margin-top: 3rem;
+		font-weight: $bold;
+		padding-bottom: .5rem;
+	}
+
+	h3 {
+		font-size: 1.4em;
+		color: var(--secundariaPrincipal);
+		margin-top: 2rem;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	h6 {
+		font-size: 0.8em;
+		color: var(--secundariaPrincipal);
+	}
+
+	a {
+		color: currentColor;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	em,
+	cite {
+		font-family: inherit;
+		font-size: inherit;
+		font-style: italic;
+	}
+
+	blockquote {
+		margin: 3rem 0;
+		margin-left: 3rem;
+	}
+
+	div,
+	blockquote,
+	li,
+	span,
+	figcaption,
+	dd,
+	dt {
+		font-family: $sans;
+		line-height: 180%;
+		max-width: 730px;
+	}
+
+
+	// 1.2 Classes de Ajuda
+
+	a.notaTexto {
+		font-size: 0.7em;
+		vertical-align: super;
+		line-height: 1em;
+	}
+
+	.versalete {
+		font-variant: small-caps;
+		text-transform: lowercase;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	.bold-versalete{
+		font-variant: small-caps;
+		text-transform: lowercase;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: $bold;
+		color: var(--primariaPrincipal);}
+	
+	.align-center {
+		text-align: center;
+	}
+
+	.cor {
+		color: var(--primariaPrincipal);
+	}
+
+	.bold {
+		font-weight: $bold;
+	}
+
+	.italic {
+		font-style: italic;
+	}
+
+	.listagem {
+		margin-left: 2rem;
+		list-style: disc;
+	
+		> p {
+			font-weight: $bold;
+			margin-bottom: 0;
+		}
+	}
+
+	.indentacao {
+		padding-left: 2rem;
+		border-left: 3px solid var(--primariaPrincipal);
+
+		@media only screen and (min-width: 720px) {
+			padding-left: 4rem;
+		}
+	}
+
+	ul, ol, p.indentacao {
+		margin: 2rem 0;
+
+		ul, ol{
+			margin: 0;
+		}
+	}
+
+
+
+	// 2. Imagens
+
+	figure {
+		margin: 2rem auto;
+		max-width: 730px;
+		// width: fit-content;
+		// width: -moz-fit-content;
+
+		@media only screen and (min-width: 720px) {
+			padding-right: 150px;
+		}
+
+		// 2.1 Imagem estática
+
+		img{
+			display: block;
+			margin: 0 auto;
+			max-width: 100%; 
+			height: auto;
+		}
+
+		// 2.2 Modelo Retrato
+
+		&.retrato {
+			margin: 3rem auto;
+			max-width: 400px;
+		}
+
+		// 2.3 Modelo Lateral
+
+		&.lateral {
+
+			width: 150px;
+			float: right;
+			// display: inline-block;
+			margin: 0;
+			margin-left: 1rem;
+
+
+			@media only screen and (min-width: 1024px) {
+				width: 270px;
+				margin-left: 2rem;
+			}
+
+			@media only screen and (min-width: 1642px) {
+				margin-right: -150px;
+			}
+		}
+
+	}
+
+
+	// 3.1 Notas
+
+	a.nota {
+		font-size: 0.8em;
+		vertical-align: super;
+		line-height: 0;
+	}
+
+	#notas {
+		border-top: 3px dotted var(--secundariaPrincipal);
+		margin-top: 3rem;
+
+		dl {
+			dt,
+			dd {
+				display: inline-block;
+			}
+
+			dt {
+				color: var(--primariaPrincipal);
+				width: 1.8rem;
+				vertical-align: top;
+
+				// @media only screen and (min-width: 720px) {
+				// 	width: 2.2rem;
+				// }
+			}
+
+			dd {
+				margin-left: 0;
+				padding-bottom: 1rem;
+				width: calc(100% - 2.5rem);
+
+				> a:not(.retornar) {
+					word-break: break-all;
+				}
+			}
+		}
+
+		a.retornar {
+			text-transform: uppercase;
+			font-family: $sans;
+			font-size: 0.75em;
+			white-space: nowrap;
+		}
+	}
+
+
+
+	
+
+}
+
+@import "personalizacao";

@@ -1,0 +1,12 @@
+[
+  {
+    "titulo": "Introdução",
+    "subtitulo": "",
+    "arquivo": "introducao.php"
+  },
+  {
+    "titulo": "Capítulo X - Exemplo ",
+    "subtitulo": "Exemplo",
+    "arquivo": "cap1.php"
+  }
+]

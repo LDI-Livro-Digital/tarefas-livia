@@ -1,0 +1,202 @@
+#paginacao{
+  margin: 0 auto;
+  height: 3rem;
+  padding: 2rem 0 4rem;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+
+  &:before{
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 10rem;
+    width: 100%;
+    position: absolute;
+    background-color: var(--secundariaOpacidade);
+  }
+
+  a{
+    display: block;
+    font-size: 16px;
+    position: relative;
+
+    .pagination-chapter{
+      text-transform: uppercase;
+      // font-variant: small-caps;
+      color: var(--secundariaPrincipal);
+      font-weight: $bold;
+      font-size: 1rem;
+    }
+
+    .pagination-title{
+      display: none;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+      }
+    }
+
+    &:before, &:after{
+      @extend %fontAwesome;
+      width: 1rem;
+      height: 1rem;
+      font-size: 20px;
+      color: var(--secundariaPrincipal);
+      position: absolute;
+    }
+
+    &:hover{
+      text-decoration: none;
+
+      .pagination-chapter{
+        border-bottom: solid 2px var(--secundariaPrincipal);
+      }
+    }
+
+    &:not(.inicio){ min-width: 7rem; }
+  }
+
+  .anterior{
+    padding-left: 1.5rem;
+    width: 15rem;
+
+    &:before{
+      content: "\f060";
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .inicio{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .5rem;
+    line-height: 1.3;
+    margin-top: -.5rem;
+
+    &:before{
+      content: "\f015";
+      font-size: 18px;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      color: white;
+    }
+
+    span{
+      @extend %readerOnly;
+    }
+  }
+
+  .flex-item2{
+    padding: 0 .5rem;
+  }
+
+  .proximo{
+    padding-right: 1.5rem;
+    width: 15rem;
+    text-align: right;
+
+    &:after{
+      content: "\f061";
+      right: 0;
+      top: 0;
+    }
+  }
+
+
+  @media only screen and (min-width: 720px) {
+    padding-bottom: 8rem;
+
+    &:before{
+      height: 14rem;
+    }
+
+    a{
+      width: 15rem;
+
+      // .pagination-chapter{
+      //   font-size: 1.25rem;
+      // }
+
+      .pagination-title{
+        display: block;
+        font-size: 1.25rem;
+        padding-top: .3rem;
+        font-family: $sans;
+      }
+
+      &:before, &:after{ font-size: 28px; }
+    }
+
+    .anterior{
+      padding-left: 2.25rem;
+      width: 15rem;
+    }
+
+    .inicio{
+      line-height: 1;
+      padding: .75rem;
+
+      &:before{ font-size: 24px; }
+    }
+
+    .proximo{
+      padding-right: 2.25rem;
+      width: 15rem;
+    }
+  }
+
+  @media all and (max-width: 520px) {
+    flex-direction: column;
+    padding: 2rem 0 4.5rem;
+
+    .flex-item1{order:2;}
+    .flex-item2{order:1; padding: 0;}
+    .flex-item3{order:3;}
+
+    &:before{
+      height: 14rem;
+    }
+
+    .inicio {
+      width: 100%;
+      padding: .5rem 0;
+      margin-top: -4.5rem;
+    }
+
+    .anterior{
+      margin-top: -.7rem;
+      padding-left: 2.25rem;
+      width: 15rem;
+    }
+
+    .proximo{
+      padding-top: 1.3rem;
+      padding-right: 2.65rem;
+      width: 15rem;
+      margin-left: auto;
+
+      &:after{
+        right: 1rem;
+        top: 1.1rem;
+        }
+      }
+
+    a{
+      .pagination-title {
+        display: none;
+      }
+    }
+  }
+}
