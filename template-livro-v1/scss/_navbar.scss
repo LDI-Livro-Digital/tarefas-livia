@@ -14,7 +14,6 @@
     align-items: center;
     height: inherit;
     height: 100%;
-    // padding: 5px 240px;
 
     // adicionado
     .nav-links {
@@ -22,26 +21,25 @@
     }
 
     // adicionado
-    @media (max-width: 768px) {
-
+    @media (max-width: 768px) { //celular
       // celular
       .nav-links {
         display: flex;
         justify-content: space-between;
       }
-
     }
 
   }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) { //pc
     height: 100px;
   }
 }
 
+// inicio das alteações do menu
 .btn-inicio-index {
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) { //pc
     height: 100px;
     display: none;
 
@@ -54,12 +52,11 @@
 .btn-busca {
   align-items: center;
   display: flex;
-  @media (max-width: 719px) {
+  @media (max-width: 719px) { //celular
     order: 2;
   }
 
-  @media screen and (min-width: 768px) {
-    //pc
+  @media (min-width: 768px) { //pc
     display: none;
   }
 }
@@ -73,7 +70,6 @@
   font-weight: $semibold;
   color: var(--secundariaPrincipal);
   border-radius: 16px;
-  // border: 2px solid black;
 
   &:hover {
     background-color: var(--primariaOpacidade);
@@ -95,8 +91,7 @@
     display: flex;
   }
 
-  @media (max-width: 719px) {
-    //celular
+  @media (max-width: 719px) { //celular
     border: none;
 
     span {
@@ -105,7 +100,6 @@
   }
 }
 
-
 .btn-ajustes {
   order: 3;
 }
@@ -113,35 +107,22 @@
 .nav-title,
 .nav-title-capitulo {
   height: fit-content;
-  // flex-grow: 1;
   overflow: hidden;
   font-family: "Atkinson Hyperlegible", sans-serif;
   color: var(--primariaPrincipal);
   font-weight: $bold;
   font-size: 14px;
   white-space: nowrap;
-  // margin-right: 1rem;
-  text-transform: uppercase; // header livia (titulo header)
+  text-transform: uppercase;
   display: flex;
   flex-flow: column;
-  // justify-content: left;
-  // align-items: left;
-  // header livia (titulo header)
   width: min-content;
-  // background-color: blue;
 
-  // header livia (titulo header)
   span {
     font-size: 10px;
     font-weight: normal;
     color: var(--textoCor);
   }
-
-  // header livia (titulo header)
-
-  // @media screen and (min-width: 1024px) {
-  //   font-size: 1.3rem;
-  // }
 
   @media (min-width: 768px) {
     font-size: 24px;
@@ -151,8 +132,7 @@
     }
   }
 
-  @media (max-width: 719px) {
-    //aqui
+  @media (max-width: 719px) { //celular
     margin-right: auto;
   }
 }
@@ -166,6 +146,7 @@
     order: 0;
   }
 }
+// fim das alterações do menu
 
 #link-inicio {
   display: none;

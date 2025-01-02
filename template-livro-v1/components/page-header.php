@@ -36,6 +36,9 @@ $autorLivro = "Nome do Autor";
 
   <nav class="navbar">
     <div class="container">
+
+    
+    <!-- codigo antigo -->
       <!-- <button id="nav-menu" data-modal="#menu" class="btn-terciary"><span>Menu</span></button>
 
       <div class="nav-title">
@@ -52,10 +55,12 @@ $autorLivro = "Nome do Autor";
         <span>Sead</span>
         <?php include('svg/sead.svg'); ?>
       </a> -->
+    <!-- fim do codigo antigo -->
 
+
+      <!-- a partir daqui foi modificado -->
       <div class="nav-title-capitulo"><span>CAPÍTULO</span><?php echo $capitulo; ?></div> 
 
-      <!-- <a id="voltar-inicio" href="index.php" title="Voltar para página inicial"><button></a> -->
         <a href="index.php" id="voltar-inicio" class="btn-terciary btn-inicio" title="Voltar para página inicial">
           <img src='img/inicio.png'>
           <span>Página Inicial</span>
@@ -63,11 +68,9 @@ $autorLivro = "Nome do Autor";
 
 
         <div id="barra-de-busca" class="btn-busca"></div>
-        <!-- <p id="erro">Erro: digite, no mínimo, três caracteres para fazer a pesquisa.</p> ver oq fazer com isso aqui-->
 
         <button id="nav-ajustes" class="btn-terciary btn-ajustes" data-modal="#modal-ajustes"><span>Ajustes de leitura</span></button>
-        <!-- <a class="nav-logo" href="https://sead.ufes.br/" target="_blank" title="Abrir site da Sead em nova aba"> -->
-          <!-- <span>Sead</span><?php include('svg/sead.svg'); ?> -->
+        <!-- fim das modificações -->
     </div>
 
     <div class="content-bar"></div>

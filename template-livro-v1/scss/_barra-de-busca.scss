@@ -1,10 +1,12 @@
 #barra-de-busca {
+	//adicionado
 	height: 42px;
 	margin: auto;
 
+	// adicionado
 	@media (max-width: 719px) { //celular
-		margin-left: 0.5rem; //aqui
-		margin-right: 0.5rem; //aqui
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
 	}
 
 	#busca div[role="search"] {
@@ -20,7 +22,7 @@
 		position: relative;
 		width: 400px;
 
-		@media (max-width: 719px) {
+		@media (max-width: 719px) { // celular
 			width: 44px;
 			height: 44px;
 			border: none;
