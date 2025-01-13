@@ -77,18 +77,52 @@ document.addEventListener("DOMContentLoaded", function () {
   navAjustes.classList.add("js"), Tema();
 });
 const modalLabel = modalAjustes.querySelector("#modal-ajustes-label");
+// navAjustes.addEventListener("click", function (e) {
+//   e.preventDefault(),
+//     modalAjustes.classList.add("show"),
+//     setTimeout(() => {
+//       modalAjustes.classList.add("habilitado");
+//     }, 100),
+//     setTimeout(() => {
+//       modalLabel.focus();
+//     }, 200),
+//     this.classList.remove("habilitado"),
+//     this.classList.add("desabilitado");
+// });
 navAjustes.addEventListener("click", function (e) {
-  e.preventDefault(),
-    modalAjustes.classList.add("show"),
+  e.preventDefault();
+
+  // Verifica se o modal está aberto (tem a classe 'show')
+  if (modalAjustes.classList.contains("show")) {
+    // Fecha o modal
+    modalAjustes.classList.remove("habilitado");
+    modalAjustes.classList.remove("show");
+    this.focus();
+    this.classList.remove("desabilitado");
+    this.classList.add("habilitado");
+
+    this.innerHTML = '<img src="./img/ajustes.png" alt="ícone ajustes de leitura"> <span>AJUSTES DE LEITURA</span>';
+    // this.textContent = "AJUSTES DE LEITURA";
+
+  } else {
+    // Abre o modal
+    modalAjustes.classList.add("show");
     setTimeout(() => {
       modalAjustes.classList.add("habilitado");
-    }, 100),
+    }, 100);
     setTimeout(() => {
       modalLabel.focus();
-    }, 200),
-    this.classList.remove("habilitado"),
+    }, 200);
+    this.classList.remove("habilitado");
     this.classList.add("desabilitado");
+
+    this.innerHTML = '<img src="./img/fechar.svg" alt="ícone fechar ajustes de leitura"> <span>FECHAR AJUSTES</span>';
+    // this.textContent = "FECHAR AJUSTES";
+  }
 });
+
+
+
 const modalClose = document.querySelector("#modal-close");
 function Tema() {
   if ("bg" in localStorage) {

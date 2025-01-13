@@ -1,10 +1,11 @@
 <div id="modal-ajustes" role="dialog" aria-labelledby="modal-ajustes-label" aria-modal="true">
-  <div class="container container-content">  
-    <span id="modal-ajustes-label" class="modal-title" tabindex="-1">Ajustes de leitura</span>
+  <!-- <div class="backdrop"></div> não está funcionando -->
 
+  <div class="container container-content">
+    <span id="modal-ajustes-label" class="modal-title" tabindex="-1">Ajustes de leitura</span>
     <ul class="modal-options">
 
-      <li class="modal-item">
+      <!-- <li class="modal-item">
         <span class="modal-item-title">Ampliação</span>
         <p class="modal-item-info">Aumente o tamanho da fonte de acordo com sua preferência.</p>
         <div>
@@ -32,10 +33,31 @@
           <button class="fundo btn-terciary" id="fundo-creme"><span>Creme</span></button>
           <button class="fundo btn-terciary" id="fundo-escuro"><span>Escuro</span></button>
         </div>
+      </li> -->
+      <li class="modal-item">
+        <span class="modal-item-title"> <img class="modal-item-icone" src="./img/ajuste-texto.svg" alt="ajuste de texto" /> AJUSTE DE TEXTO</span>
+        <p class="modal-item-info">Altere o tamanho e espaçamento do texto para melhorar sua leitura.</p>
+
+        <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
+      </li>
+
+      <li class="modal-item">
+        <span class="modal-item-title"> <img class="modal-item-icone" src="./img/tema-leitura.svg" alt="tema de leitura" />TEMA DE LEITURA</span>
+        <p class="modal-item-info">Altere o tema para mudar as cores do fundo e texto.</p>
+        <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
+
+      </li>
+
+      <li class="modal-item">
+        <span class="modal-item-title"><img class="modal-item-icone" src="./img/personalizar.svg" alt="personalizar leitura" />PERSONALIZAR LEITURA</span>
+        <p class="modal-item-info">Opções adicionais para você.</p>
+        <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
+
+
       </li>
       
     </ul>
-    <button id="modal-close" class="btn-terciary"><span>Recolher opções de personalização</span></button>
+    <!-- <button id="modal-close" class="btn-terciary"><span>Recolher opções de personalização</span></button> -->
 
   </div>
 </div>

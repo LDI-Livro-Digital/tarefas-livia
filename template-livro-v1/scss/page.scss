@@ -63,6 +63,13 @@
           font-weight: 900;
           padding-right: 6px;
         }
+
+        &:active {
+          background-color: var(--secundariaPrincipal);
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
       }
 
       #menu-close {

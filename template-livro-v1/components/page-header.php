@@ -69,7 +69,9 @@ $autorLivro = "Nome do Autor";
 
         <div id="barra-de-busca" class="btn-busca"></div>
 
-        <button id="nav-ajustes" class="btn-terciary btn-ajustes" data-modal="#modal-ajustes"><span>Ajustes de leitura</span></button>
+        <button id="nav-ajustes" class="btn-terciary btn-ajustes" data-modal="#modal-ajustes">
+          <img src="./img/ajustes.png" alt="icone"/>
+          <span>Ajustes de leitura</span></button>
         <!-- fim das modificações -->
     </div>
 

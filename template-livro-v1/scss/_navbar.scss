@@ -102,6 +102,7 @@
 
 .btn-ajustes {
   order: 3;
+  z-index: 40;
 }
 
 .nav-title,
@@ -189,18 +190,19 @@
     display: block;
   }
 
-  &:before {
-    @extend %fontAwesome;
-  }
+  // &:before {
+  //   @extend %fontAwesome;
+  // }
 
   span {
     margin-left: .5rem;
   }
 
-  &.desabilitado {
-    opacity: .2;
-    cursor: default;
-  }
+  // modificar aqui
+  // &.desabilitado {
+  //   opacity: .2;
+  //   cursor: default;
+  // }
 }
 
 
@@ -215,16 +217,18 @@
   // @media (max-width: 768px) {
   //   margin-left: 0.5rem; //aqui
   // }
-
+  &.desabilitado {
+    border-radius: 16px 16px 0px 16px;
+  }
 
   &.js {
     display: flex;
   }
 
-  &:before {
-    content: url('../img/ajustes.png');
-    // content: "\f1de";
-  }
+  // &:before {
+  //   content: url('../img/ajustes.png');
+  //   // content: "\f1de";
+  // }
 
   @media (max-width: 768px) {
     span {
@@ -232,6 +236,22 @@
     }
 
     border: none;
+
+    &:active {
+      background-color: var(--secundariaPrincipal);
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: var(--secundariaPrincipal);
+    color: white;
+    
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 

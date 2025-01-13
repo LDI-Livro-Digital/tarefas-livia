@@ -48,7 +48,10 @@ echo '<script defer type="module" src="scripts/modulo.js"></script>';
         <div id="barra-de-busca"></div>
         <!-- <p id="erro">Erro: digite, no mínimo, três caracteres para fazer a pesquisa.</p> ver oq fazer com isso aqui-->
 
-        <button id="nav-ajustes" class="btn-terciary" data-modal="#modal-ajustes"><span>Ajustes de leitura</span></button>
+        <button class="btn-terciary" id="nav-ajustes" data-modal="#modal-ajustes">
+        <img src="img/ajustes.png" alt="icone"/>
+          
+        <span>Ajustes de leitura</span></button>
         <!-- <a class="nav-logo" href="https://sead.ufes.br/" target="_blank" title="Abrir site da Sead em nova aba"> -->
           <!-- <span>Sead</span><?php include('svg/sead.svg'); ?> -->
 
