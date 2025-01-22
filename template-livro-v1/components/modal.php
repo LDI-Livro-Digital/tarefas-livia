@@ -1,7 +1,8 @@
+
 <div id="modal-ajustes" role="dialog" aria-labelledby="modal-ajustes-label" aria-modal="true">
   <!-- <div class="backdrop"></div> não está funcionando -->
 
-  <div class="container container-content">
+  <div class="container container-content"> <!--- id="modal-ajustes-content"  -->
     <span id="modal-ajustes-label" class="modal-title" tabindex="-1">Ajustes de leitura</span>
     <ul class="modal-options">
 
@@ -34,10 +35,11 @@
           <button class="fundo btn-terciary" id="fundo-escuro"><span>Escuro</span></button>
         </div>
       </li> -->
-      <li class="modal-item">
+      <li id="abrir-ajustes-texto" class="modal-item" onclick="abrirAjusteDeTexto()">
         <span class="modal-item-title"> <img class="modal-item-icone" src="./img/ajuste-texto.svg" alt="ajuste de texto" /> AJUSTE DE TEXTO</span>
         <p class="modal-item-info">Altere o tamanho e espaçamento do texto para melhorar sua leitura.</p>
 
+        <!-- <button class="modal-item-abrir"></button> -->
         <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
       </li>
 
@@ -60,4 +62,92 @@
     <!-- <button id="modal-close" class="btn-terciary"><span>Recolher opções de personalização</span></button> -->
 
   </div>
+
+
+
+
+
+
+
+
+
+  <div id="modal-ajustes-texto" class="submodal">
+  <span class="modal-title">
+  <button id="submodal-retorno-ajustes-texto"></button>
+  Ajuste de texto</span>
+
+  <div class="submodal-content">
+    <div class="submodal-item">
+      <span class="submodal-item-titulo"> ESPAÇO ENTRE LETRAS</span>
+
+      <div class="submodal-item-buttons">
+        <button class="btn-terciary" id="btn-espaco-letras-diminui"></button>
+        <button class="btn-terciary disabled" id="btn-espaco-letras-normal"></button>
+        <button class="btn-terciary" id="btn-espaco-letras-aumenta"></button>
+      </div>
+
+      <div class="container-barra">
+
+        <div class="barra">
+          <div id="barra-fill-letras" class="barra-fill" ></div>
+        </div>
+
+      </div>
+      <p id="nota-ajuste-letra">Você selecionou: <span id="percentagem-letras">3%</span>. <span id="nota-adicional-letras">Este é o espaçamento entre letras recomendado.</span></p>
+
+    </div>
+
+
+    <div class="submodal-item">
+      <span class="submodal-item-titulo"> ESPAÇO ENTRE LINHAS</span>
+
+      <div class="submodal-item-buttons">
+      <button class="btn-terciary" id="btn-espaco-linhas-diminui"></button>
+        <button class="btn-terciary disabled" id="btn-espaco-linhas-normal"></button>
+        <button class="btn-terciary" id="btn-espaco-linhas-aumenta"></button>
+      </div>
+
+      <div class="container-barra">
+
+        <div class="barra">
+          <div class="barra-fill" id="barra-fill-linhas"></div>
+        </div>
+
+      </div>
+      <p id="nota-ajuste-linha">Você selecionou: <span id="percentagem-linha">180%</span>. <span id="nota-adicional-linhas">Este é o espaçamento entre linhas recomendado.</span></p>
+
+    </div>
+
+
+    <div class="submodal-item">
+      <span class="submodal-item-titulo"> TAMANHO DA FONTE</span>
+
+      <div class="submodal-item-buttons">
+        <button id="btn-fonte-diminui" class="btn-terciary"></button>
+        <button id="btn-fonte-normal" class="btn-terciary disabled"></button>
+        <button id="btn-fonte-aumenta" class="btn-terciary"></button>
+      </div>
+
+      <div class="container-barra">
+
+        <div class="barra">
+          <div id="barra-fill-fonte" class="barra-fill"></div>
+        </div>
+
+      </div>
+      <p id="nota-ajuste-fonte">Você selecionou: <span id="tamanho-fonte">16px</span>. <span id="nota-adicional-fonte">Este é o tamanho de texto recomendado.</span></p>
+
+    </div>
+
+  </div>
 </div>
+
+
+
+
+
+
+
+
+</div>
+

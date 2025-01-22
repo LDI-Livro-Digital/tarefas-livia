@@ -108,7 +108,7 @@ $autorLivro = "Nome do Autor";
       </div>
     </aside>
 
-    <div class="container container-content">
+    <div id="conteudo-pagina" class="container container-content">
       <article>
         <h1>
           <?php $length = strlen($capitulo);
