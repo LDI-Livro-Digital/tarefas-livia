@@ -30,6 +30,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const abrirAjustesTema = document.getElementById("abrir-ajustes-tema");
+  const modalAjustesTema = document.getElementById("modal-ajustes-tema");
+  const modalAjustesContent = document.querySelector("#modal-ajustes .container-content");
+
+
+
+  // Abrir o modal ao clicar na li
+  abrirAjustesTema.addEventListener("click", () => {
+    modalAjustesTema.classList.add("show"); // Abre o modal
+    modalAjustesContent.classList.remove("show");
+
+    const interval = setInterval(() => {
+      const fecharAjustesTema = document.getElementById("submodal-retorno-ajustes-tema");
+      if (fecharAjustesTema) {
+        // Se o botão de fechar existir, adiciona o evento de fechar
+        modalAjustesContent.classList.remove("show");
+
+        fecharAjustesTema.addEventListener("click", () => {
+          modalAjustesTema.classList.remove("show"); // Fecha o modal
+          modalAjustesContent.classList.add("show");
+
+        });
+
+        clearInterval(interval); // Limpa o intervalo depois de adicionar o listener
+      }
+    }, 100); // Verifica a cada 100ms até o botão aparecer
+  });
+});
+
 
 
 
@@ -281,8 +311,49 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 
+const bodyPush = document.body,
+  fundoCreme = document.querySelector("#fundo-creme"),
+  fundoBranco = document.querySelector("#fundo-branco"),
+  fundoEscuro = document.querySelector("#fundo-escuro");
+const submodal = document.querySelector("#modal-ajustes-tema");
+const notaTema = document.querySelector("#nota-adicional-tema");
 
+fundoCreme.addEventListener("click", () => {
+  localStorage.setItem("bg", "creme"),
+    bodyPush.classList.remove("escuro", "branco"),
+    bodyPush.classList.add("creme"),
+    submodal.classList.remove("escuro", "branco"),
+    submodal.classList.add("creme"),
+    notaTema.textContent = 'creme.';
+  ativar(fundoCreme);
+}),
+  fundoBranco.addEventListener("click", () => {
+    localStorage.setItem("bg", "branco"),
+      bodyPush.classList.remove("escuro", "creme"),
+      bodyPush.classList.add("branco"),
+      submodal.classList.remove("escuro", "creme"),
+      submodal.classList.add("branco"),
+      notaTema.textContent = 'branco.';
 
+    ativar(fundoBranco);
+  }),
+  fundoEscuro.addEventListener("click", () => {
+    localStorage.setItem("bg", "escuro"),
+      bodyPush.classList.remove("creme", "branco"),
+      bodyPush.classList.add("escuro"),
+      submodal.classList.remove("creme", "branco"),
+      submodal.classList.add("escuro"),
+      notaTema.textContent = 'escuro.';
+    ativar(fundoEscuro);
+  });
+
+const fundoBtns = document.querySelectorAll(".submodal-item-options button");
+function ativar(elemento) {
+  fundoBtns.forEach((btn) => {
+    btn.classList.remove("ativo");
+  }),
+    elemento.classList.add("ativo");
+}
 
 
 const btnToTop = document.querySelector("#voltar-topo");
@@ -410,13 +481,13 @@ navAjustes.addEventListener("click", function (e) {
 
     this.innerHTML = '<img src="./img/fechar.svg" alt="ícone fechar ajustes de leitura"> <span>FECHAR AJUSTES</span>';
     // this.textContent = "FECHAR AJUSTES";
-  
-    const modalAjustesTexto = document.getElementById("modal-ajustes-texto");
 
-    if (modalAjustesTexto.classList.contains("show")) {
+    const modalAjustesTexto = document.getElementById("modal-ajustes-texto");
+    const modalAjustesTema = document.getElementById("modal-ajustes-tema");
+
+    if (modalAjustesTexto.classList.contains("show") || modalAjustesTema.classList.contains("show")) {
       // Se o botão de fechar existir, adiciona o evento de fechar
       modalContent.classList.remove("show");
-
     }
 
 
@@ -467,35 +538,8 @@ modalClose.addEventListener("click", function () {
         navAjustes.classList.remove("desabilitado"),
         navAjustes.classList.add("habilitado"));
   });
-const fundoBtns = document.querySelectorAll(".modal-item-options button");
-function ativar(elemento) {
-  fundoBtns.forEach((btn) => {
-    btn.classList.remove("ativo");
-  }),
-    elemento.classList.add("ativo");
-}
-// const bodyPush = document.body,
-//   fundoCreme = document.querySelector("#fundo-creme"),
-//   fundoBranco = document.querySelector("#fundo-branco"),
-//   fundoEscuro = document.querySelector("#fundo-escuro");
-// fundoCreme.addEventListener("click", () => {
-//   localStorage.setItem("bg", "creme"),
-//     bodyPush.classList.remove("escuro", "branco"),
-//     bodyPush.classList.add("creme"),
-//     ativar(fundoCreme);
-// }),
-//   fundoBranco.addEventListener("click", () => {
-//     localStorage.setItem("bg", "branco"),
-//       bodyPush.classList.remove("escuro", "creme"),
-//       bodyPush.classList.add("branco"),
-//       ativar(fundoBranco);
-//   }),
-//   fundoEscuro.addEventListener("click", () => {
-//     localStorage.setItem("bg", "escuro"),
-//       bodyPush.classList.remove("creme", "branco"),
-//       bodyPush.classList.add("escuro"),
-//       ativar(fundoEscuro);
-//   });
+
+
 // const modoDislexia = document.querySelector("#dislexia");
 // modoDislexia.addEventListener("change", () => {
 //   modoDislexia.checked

@@ -38,12 +38,10 @@
       <li id="abrir-ajustes-texto" class="modal-item" onclick="abrirAjusteDeTexto()">
         <span class="modal-item-title"> <img class="modal-item-icone" src="./img/ajuste-texto.svg" alt="ajuste de texto" /> AJUSTE DE TEXTO</span>
         <p class="modal-item-info">Altere o tamanho e espaçamento do texto para melhorar sua leitura.</p>
-
-        <!-- <button class="modal-item-abrir"></button> -->
         <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
       </li>
 
-      <li class="modal-item">
+      <li id="abrir-ajustes-tema" class="modal-item" onclick="abrirAjusteDeTema()">
         <span class="modal-item-title"> <img class="modal-item-icone" src="./img/tema-leitura.svg" alt="tema de leitura" />TEMA DE LEITURA</span>
         <p class="modal-item-info">Altere o tema para mudar as cores do fundo e texto.</p>
         <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
@@ -70,76 +68,104 @@
 
 
 
-
+  <!-- inicio ajustes de texto -->
   <div id="modal-ajustes-texto" class="submodal">
   <span class="modal-title">
   <button id="submodal-retorno-ajustes-texto"></button>
   Ajuste de texto</span>
 
-  <div class="submodal-content">
-    <div class="submodal-item">
-      <span class="submodal-item-titulo"> ESPAÇO ENTRE LETRAS</span>
+    <div class="submodal-content">
+      <div class="submodal-item">
+        <span class="submodal-item-titulo"> ESPAÇO ENTRE LETRAS</span>
 
-      <div class="submodal-item-buttons">
-        <button class="btn-terciary" id="btn-espaco-letras-diminui"></button>
-        <button class="btn-terciary disabled" id="btn-espaco-letras-normal"></button>
-        <button class="btn-terciary" id="btn-espaco-letras-aumenta"></button>
-      </div>
-
-      <div class="container-barra">
-
-        <div class="barra">
-          <div id="barra-fill-letras" class="barra-fill" ></div>
+        <div class="submodal-item-buttons">
+          <button class="btn-terciary" id="btn-espaco-letras-diminui"></button>
+          <button class="btn-terciary disabled" id="btn-espaco-letras-normal"></button>
+          <button class="btn-terciary" id="btn-espaco-letras-aumenta"></button>
         </div>
 
+        <div class="container-barra">
+
+          <div class="barra">
+            <div id="barra-fill-letras" class="barra-fill" ></div>
+          </div>
+
+        </div>
+        <p id="nota-ajuste-letra">Você selecionou: <span id="percentagem-letras">3%</span>. <span id="nota-adicional-letras">Este é o espaçamento entre letras recomendado.</span></p>
+
       </div>
-      <p id="nota-ajuste-letra">Você selecionou: <span id="percentagem-letras">3%</span>. <span id="nota-adicional-letras">Este é o espaçamento entre letras recomendado.</span></p>
+
+
+      <div class="submodal-item">
+        <span class="submodal-item-titulo"> ESPAÇO ENTRE LINHAS</span>
+
+        <div class="submodal-item-buttons">
+        <button class="btn-terciary" id="btn-espaco-linhas-diminui"></button>
+          <button class="btn-terciary disabled" id="btn-espaco-linhas-normal"></button>
+          <button class="btn-terciary" id="btn-espaco-linhas-aumenta"></button>
+        </div>
+
+        <div class="container-barra">
+
+          <div class="barra">
+            <div class="barra-fill" id="barra-fill-linhas"></div>
+          </div>
+
+        </div>
+        <p id="nota-ajuste-linha">Você selecionou: <span id="percentagem-linha">180%</span>. <span id="nota-adicional-linhas">Este é o espaçamento entre linhas recomendado.</span></p>
+
+      </div>
+
+
+      <div class="submodal-item">
+        <span class="submodal-item-titulo"> TAMANHO DA FONTE</span>
+
+        <div class="submodal-item-buttons">
+          <button id="btn-fonte-diminui" class="btn-terciary"></button>
+          <button id="btn-fonte-normal" class="btn-terciary disabled"></button>
+          <button id="btn-fonte-aumenta" class="btn-terciary"></button>
+        </div>
+
+        <div class="container-barra">
+
+          <div class="barra">
+            <div id="barra-fill-fonte" class="barra-fill"></div>
+          </div>
+
+        </div>
+        <p id="nota-ajuste-fonte">Você selecionou: <span id="tamanho-fonte">16px</span>. <span id="nota-adicional-fonte">Este é o tamanho de texto recomendado.</span></p>
+
+      </div>
 
     </div>
+  </div>
+  <!-- final ajustes de texto -->
 
+  <!-- inicio ajuste de tema -->
+  <div id="modal-ajustes-tema" class="submodal">
+    <span class="modal-title">
+    <button id="submodal-retorno-ajustes-tema"></button>
+    TEMA DE LEITURA</span>
 
-    <div class="submodal-item">
-      <span class="submodal-item-titulo"> ESPAÇO ENTRE LINHAS</span>
+    <div class="submodal-content">
+      <div class="submodal-item">
+        <span class="submodal-item-titulo"> TEMA</span>
 
-      <div class="submodal-item-buttons">
-      <button class="btn-terciary" id="btn-espaco-linhas-diminui"></button>
-        <button class="btn-terciary disabled" id="btn-espaco-linhas-normal"></button>
-        <button class="btn-terciary" id="btn-espaco-linhas-aumenta"></button>
-      </div>
-
-      <div class="container-barra">
-
-        <div class="barra">
-          <div class="barra-fill" id="barra-fill-linhas"></div>
-        </div>
-
-      </div>
-      <p id="nota-ajuste-linha">Você selecionou: <span id="percentagem-linha">180%</span>. <span id="nota-adicional-linhas">Este é o espaçamento entre linhas recomendado.</span></p>
-
-    </div>
-
-
-    <div class="submodal-item">
-      <span class="submodal-item-titulo"> TAMANHO DA FONTE</span>
-
-      <div class="submodal-item-buttons">
-        <button id="btn-fonte-diminui" class="btn-terciary"></button>
-        <button id="btn-fonte-normal" class="btn-terciary disabled"></button>
-        <button id="btn-fonte-aumenta" class="btn-terciary"></button>
-      </div>
-
-      <div class="container-barra">
-
-        <div class="barra">
-          <div id="barra-fill-fonte" class="barra-fill"></div>
-        </div>
+        <div class="submodal-item-options">
+          <button class=" ativo btn-terciary" id="fundo-branco"><span></span></button>
+          <button class=" btn-terciary" id="fundo-escuro"><span></span></button>
+          <button class=" btn-terciary" id="fundo-creme"><span></span></button>
 
       </div>
-      <p id="nota-ajuste-fonte">Você selecionou: <span id="tamanho-fonte">16px</span>. <span id="nota-adicional-fonte">Este é o tamanho de texto recomendado.</span></p>
+
+      <span> Você selecionou o tema <b><span id="nota-adicional-tema">claro.</span><b></span>
 
     </div>
 
   </div>
+
+  <!-- final ajuste de tema -->
+
 </div>
 
 
