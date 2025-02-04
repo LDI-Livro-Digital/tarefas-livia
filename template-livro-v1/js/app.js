@@ -61,7 +61,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const abrirAjustesPersonalizacao = document.getElementById("abrir-ajustes-personalizacao");
+  const modalAjustesPersonalizacao = document.getElementById("modal-ajustes-personalizacao");
+  const modalAjustesContent = document.querySelector("#modal-ajustes .container-content");
 
+
+
+  // Abrir o modal ao clicar na li
+  abrirAjustesPersonalizacao.addEventListener("click", () => {
+    modalAjustesPersonalizacao.classList.add("show"); // Abre o modal
+    modalAjustesContent.classList.remove("show");
+
+    const interval = setInterval(() => {
+      const fecharAjustesPersonalizacao = document.getElementById("submodal-retorno-ajustes-personalizacao");
+      if (fecharAjustesPersonalizacao) {
+        // Se o botão de fechar existir, adiciona o evento de fechar
+        modalAjustesContent.classList.remove("show");
+
+        fecharAjustesPersonalizacao.addEventListener("click", () => {
+          modalAjustesPersonalizacao.classList.remove("show"); // Fecha o modal
+          modalAjustesContent.classList.add("show");
+
+        });
+
+        clearInterval(interval); // Limpa o intervalo depois de adicionar o listener
+      }
+    }, 100); // Verifica a cada 100ms até o botão aparecer
+  });
+});
 
 
 // INICIO DA FONTE
@@ -484,8 +512,9 @@ navAjustes.addEventListener("click", function (e) {
 
     const modalAjustesTexto = document.getElementById("modal-ajustes-texto");
     const modalAjustesTema = document.getElementById("modal-ajustes-tema");
+    const modalAjustesPersonalizacao = document.getElementById("modal-ajustes-personalizacao");
 
-    if (modalAjustesTexto.classList.contains("show") || modalAjustesTema.classList.contains("show")) {
+    if (modalAjustesTexto.classList.contains("show") || modalAjustesTema.classList.contains("show") || modalAjustesPersonalizacao.classList.contains("show")) {
       // Se o botão de fechar existir, adiciona o evento de fechar
       modalContent.classList.remove("show");
     }

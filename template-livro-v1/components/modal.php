@@ -48,7 +48,7 @@
 
       </li>
 
-      <li class="modal-item">
+      <li id="abrir-ajustes-personalizacao" class="modal-item" onclick="abrirAjusteDePersonalizacao()">
         <span class="modal-item-title"><img class="modal-item-icone" src="./img/personalizar.svg" alt="personalizar leitura" />PERSONALIZAR LEITURA</span>
         <p class="modal-item-info">Opções adicionais para você.</p>
         <img class="modal-item-abrir" src="./img/seta-direita.svg" alt="ver ajuste de texto"/>
@@ -155,7 +155,7 @@
           <button class=" ativo btn-terciary" id="fundo-branco"><span></span></button>
           <button class=" btn-terciary" id="fundo-escuro"><span></span></button>
           <button class=" btn-terciary" id="fundo-creme"><span></span></button>
-
+        </div>
       </div>
 
       <span> Você selecionou o tema <b><span id="nota-adicional-tema">claro.</span><b></span>
@@ -165,6 +165,43 @@
   </div>
 
   <!-- final ajuste de tema -->
+
+  <!-- inicio ajuste de personalização -->
+
+  <div id="modal-ajustes-personalizacao" class="submodal">
+    <span class="modal-title">
+    <button id="submodal-retorno-ajustes-personalizacao"></button>
+    PERSONALIZAR LEITURA</span>
+
+    <div class="submodal-content">
+      <div class="submodal-item submodal-personalizacao">
+        <span class="submodal-item-titulo"> ANIMAÇÕES E CORES</span>
+        <span class="texto"> Quando ativado, <span class="texto-verde">habilita as animações e cores</span> durante a leitura.</span>
+      
+        <label class="switch">
+
+            <input type="checkbox" class="checkbox" id="animação-toggle">
+            <span class="switch-button"></span>
+            <span class="texto-btn-personalizar"></span>
+        </label>
+      </div>
+
+      <div class="submodal-item submodal-personalizacao">
+        <span class="submodal-item-titulo"> FOCO DE LEITURA</span>
+        <span class="texto"> Quando ativado, sua leitura será auxiliada com <span class="texto-verde">foco por parágrafos.</span></span>
+      
+        <label id="last-switch" class="switch">
+
+          <input type="checkbox" class="checkbox" id="animação-toggle">
+          <span class="switch-button"></span>
+          <span class="texto-btn-personalizar"></span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- final ajuste de personalização -->
 
 </div>
 
