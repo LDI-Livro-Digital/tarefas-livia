@@ -186,6 +186,7 @@
         </label>
       </div>
 
+      <!--
       <div class="submodal-item submodal-personalizacao">
         <span class="submodal-item-titulo"> FOCO DE LEITURA</span>
         <span class="texto"> Quando ativado, sua leitura será auxiliada com <span class="texto-verde">foco por parágrafos.</span></span>
@@ -197,6 +198,7 @@
           <span class="texto-btn-personalizar"></span>
         </label>
       </div>
+      -->
 
     </div>
   </div>
